@@ -94,15 +94,19 @@
                 <div class="col-lg-6 order-xl-1 order-md-2 order-sm-2 order-2 pl_md--30 pl_sm--30">
                     <div class="banner-company-area-main__wrapper">
                         <span class="pre-title">
-                            Our Forestry Consulting Agency
+                            Business, Environmental, and Social Consulting Experts
                         </span>
                         <h1 class="title">PT Catur Samasta Indonusa</h1>
-                        <p>Kami adalah perusahaan konsultan yang bergerak di bidang kehutanan, berfokus pada pengelolaan
-                            sumber daya alam yang berkelanjutan dan bertanggung jawab. Dengan tim profesional dan
-                            berpengalaman, kami memberikan solusi konsultasi yang inovatif, terpercaya, dan berbasis data
-                            untuk mendukung pengelolaan hutan yang lebih baik.</p>
+                        <p>PT Catur Samasta Indonusa adalah perusahaan konsultan yang bergerak di bidang manajemen,
+                            lingkungan, dan sosial. Kami menyediakan berbagai layanan seperti feasibility study, tata ruang,
+                            survei potensi hutan, social impact assessment, serta kajian sosial ekonomi budaya masyarakat.
+                            Dengan tim profesional dan berpengalaman, kami berkomitmen memberikan solusi yang inovatif,
+                            terpercaya, dan berbasis data untuk mendukung pengelolaan sumber daya alam yang berkelanjutan,
+                            bertanggung jawab, serta berdampak positif bagi lingkungan dan masyarakat. Bidang-bidang yang
+                            kami tangani antara lain Kehutanan, Pertanian, Perkebunan, Pertambangan, Perikanan, dan bidang
+                            lainnya yang relevan.</p>
                         <div class="button-area-wrapper">
-                            <a href="#contact" class="tmp-btn btn-primary">Contact Us</a>
+                            <a href="#contact" class="tmp-btn btn-success">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -232,7 +236,16 @@
             </div>
         </div>
     </div>
-    <!-- short discription about company area end -->
+
+    <div class="col-lg-12" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
+        <div class="section-head">
+            <div class="section-sub-title center-title">
+                <span>OUR CLIENTS AND PARTNERS</span>
+            </div>
+            <h2 class="title split-collab">Meet Our Valued Clients and Partners</h2>
+        </div>
+    </div>
+
 
     <!-- about company wrapper -->
     <section class="about-company-area tmp-section-gapBottom" id="about">
@@ -341,162 +354,150 @@
 
     <!-- rmp portfolio mesonary area -->
     <div class="tmp-portfolio-area tmp-section-gapBottom" id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                    <div class="section-head">
-                        <div class="section-sub-title center-title">
-                            <img src="<?php echo e(asset('assets/images/services/section-custom-menubar.png ')); ?>"src="<?php echo e(asset('assets/images/services/section-custom-menubar.png ')); ?>"
-                                alt="Business_Consulting_services">
-                            <span>OUR PORTFOLIO</span>
+        <div class="tmp-product-area tmp-section-gapTop bg-product-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-head color-white">
+                            <div class="section-sub-title center-title">
+                                <span class="subtitle">OUR PORTFOLIO</span>
+                            </div>
+                            <h2 class="title split-collab">Let's Check Our Best Works </h2>
                         </div>
-                        <h2 class="title split-collab">Let's Check Our Best Works</h2>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="tmp-mesonary-area-main main-isotop">
-                        <div class="tmp-button-group mb--50 filters-button-group">
-                            <button class="button is-checked" data-filter="*">All Product</button>
-                            <button class="button" data-filter=".creative">Dashboard</button>
-                            <button class="button" data-filter=".design">Website</button>
-                            <button class="button" data-filter=".photo">HTML/CSS</button>
-                            <button class="button" data-filter=".style">Dashboard</button>
-                        </div>
-                        <div class="portfolio_wrap">
-                            <div class="filter row portfolio-feed personal g-5">
-                                <div class="flash grid-item-p element-item transition creative col-md-6 col-sm-6"
-                                    data-category="transition">
-                                    <!-- single portfolio-item -->
-                                    <div class="tmp-single-portfolio-item">
-                                        <a href="<?php echo e(route('projects-details')); ?>" class="thumbnail">
-                                            <img src="<?php echo e(asset('assets/images/product/07.jpg')); ?>"src="<?php echo e(asset('assets/images/product/07.jpg')); ?>"
-                                                alt="personal_portfolio">
-                                        </a>
-                                        <div class="tmp-inner-content">
-                                            <div class="top-item">
-                                                <span class="left">Mobile App Design</span>
-                                                <span class="left">25 likes</span>
-                                            </div>
-                                            <a href="<?php echo e(route('projects-details')); ?>">
-                                                <h2 class="title">Its Our Igniting Innovation</h2>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- single portfolio-item end -->
-                                </div>
+            <div class="container-full">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- product swiper area start -->
+                        <div class="product-swiper-area-one">
 
-                                <div class="flash grid-item-p element-item transition design col-md-6 col-sm-6"
-                                    data-category="transition">
-                                    <!-- single portfolio-item -->
-                                    <div class="tmp-single-portfolio-item">
-                                        <a href="<?php echo e(route('projects-details')); ?>" class="thumbnail">
-                                            <img src="<?php echo e(asset('assets/images/product/02.jpg')); ?>"src="<?php echo e(asset('assets/images/product/02.jpg')); ?>"
-                                                alt="personal_portfolio">
-                                        </a>
-                                        <div class="tmp-inner-content">
-                                            <div class="top-item">
-                                                <span class="left">Mobile App Design</span>
-                                                <span class="left">25 likes</span>
-                                            </div>
-                                            <a href="<?php echo e(route('projects-details')); ?>">
-                                                <h2 class="title">Showcasing Startup Ventures</h2>
+                            <div class="swiper mySwiper-portfolio-1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <!-- single product area start -->
+                                        <div class="signle-product-start"
+                                            data-tmp-cursor="lg text-secondary transparent fw-bold"
+                                            data-tmp-cursor-icon="fa-solid fa-arrow-up-right">
+                                            <a class="thumbnail">
+                                                <img src="<?php echo e(asset('assets/images/portfolio/portfolio-1.png')); ?>"src="<?php echo e(asset('assets/images/services/section-custom-menubar.png')); ?>"
+                                                    alt="corporate_business">
                                             </a>
-                                        </div>
-                                    </div>
-                                    <!-- single portfolio-item end -->
-                                </div>
-
-                                <div class="flash grid-item-p element-item transition photo col-md-6 col-sm-6"
-                                    data-category="transition">
-                                    <!-- single portfolio-item -->
-                                    <div class="tmp-single-portfolio-item">
-                                        <a href="<?php echo e(route('projects-details')); ?>" class="thumbnail">
-                                            <img src="<?php echo e(asset('assets/images/product/03.jpg')); ?>"src="<?php echo e(asset('assets/images/product/03.jpg')); ?>"
-                                                alt="personal_portfolio">
-                                        </a>
-                                        <div class="tmp-inner-content">
-                                            <div class="top-item">
-                                                <span class="left">Mobile App Design</span>
-                                                <span class="left">25 likes</span>
+                                            <div class="inner-content">
+                                                <a>
+                                                    <h5 class="title">Corporate Design</h5>
+                                                </a>
+                                                <span class="designation">Financial advisory</span>
+                                                <div class="tag"></div>
                                             </div>
-                                            <a href="<?php echo e(route('projects-details')); ?>">
-                                                <h2 class="title">Navigating Startup Success</h2>
-                                            </a>
                                         </div>
+                                        <!-- single product area end -->
                                     </div>
-                                    <!-- single portfolio-item end -->
-                                </div>
-
-                                <div class="flash grid-item-p element-item transition photo style col-md-6 col-sm-6"
-                                    data-category="transition" style="position: absolute; left: 0px; top: 509.516px;">
-                                    <!-- single portfolio-item -->
-                                    <div class="tmp-single-portfolio-item">
-                                        <a href="<?php echo e(route('projects-details')); ?>" class="thumbnail">
-                                            <img src="<?php echo e(asset('assets/images/product/04.jpg')); ?>"src="<?php echo e(asset('assets/images/product/04.jpg')); ?>"
-                                                alt="personal_portfolio">
-                                        </a>
-                                        <div class="tmp-inner-content">
-                                            <div class="top-item">
-                                                <span class="left">Mobile App Design</span>
-                                                <span class="left">25 likes</span>
+                                    <div class="swiper-slide">
+                                        <!-- single product area start -->
+                                        <div class="signle-product-start"
+                                            data-tmp-cursor="lg text-secondary transparent fw-bold"
+                                            data-tmp-cursor-icon="fa-solid fa-arrow-up-right">
+                                            <a class="thumbnail">
+                                                <img src="<?php echo e(asset('assets/images/portfolio/portfolio-2.png')); ?>"src="<?php echo e(asset('assets/images/services/section-custom-menubar.png')); ?>"
+                                                    alt="corporate_business">
+                                            </a>
+                                            <div class="inner-content">
+                                                <a>
+                                                    <h5 class="title">Executive Design Kit</h5>
+                                                </a>
+                                                <span class="designation">Financial advisory</span>
+                                                <div class="tag"></div>
                                             </div>
-                                            <a href="<?php echo e(route('projects-details')); ?>">
-                                                <h2 class="title">Mobile App Design UI/UX <br>
-                                                    In Figma</h2>
-                                            </a>
                                         </div>
+                                        <!-- single product area end -->
                                     </div>
-                                    <!-- single portfolio-item end -->
-                                </div>
-
-                                <div class="flash grid-item-p element-item transition creative col-md-6 col-sm-6"
-                                    data-category="transition" style="position: absolute; left: 440px; top: 509.516px;">
-                                    <!-- single portfolio-item -->
-                                    <div class="tmp-single-portfolio-item">
-                                        <a href="<?php echo e(route('projects-details')); ?>" class="thumbnail">
-                                            <img src="<?php echo e(asset('assets/images/product/05.jpg')); ?>"src="<?php echo e(asset('assets/images/product/05.jpg')); ?>"
-                                                alt="personal_portfolio">
-                                        </a>
-                                        <div class="tmp-inner-content">
-                                            <div class="top-item">
-                                                <span class="left">Mobile App Design</span>
-                                                <span class="left">25 likes</span>
+                                    <div class="swiper-slide">
+                                        <!-- single product area start -->
+                                        <div class="signle-product-start"
+                                            data-tmp-cursor="lg text-secondary transparent fw-bold"
+                                            data-tmp-cursor-icon="fa-solid fa-arrow-up-right">
+                                            <a class="thumbnail">
+                                                <img src="<?php echo e(asset('assets/images/portfolio/portfolio-3.png')); ?>"src="<?php echo e(asset('assets/images/services/section-custom-menubar.png')); ?>"
+                                                    alt="corporate_business">
+                                            </a>
+                                            <div class="inner-content">
+                                                <a>
+                                                    <h5 class="title">Business Theme Pack</h5>
+                                                </a>
+                                                <span class="designation">Financial advisory</span>
+                                                <div class="tag"></div>
                                             </div>
-                                            <a href="<?php echo e(route('projects-details')); ?>">
-                                                <h2 class="title">Mobile App Design UI/UX <br>
-                                                    In Figma</h2>
-                                            </a>
                                         </div>
+                                        <!-- single product area end -->
                                     </div>
-                                    <!-- single portfolio-item end -->
-                                </div>
-
-                                <div class="flash grid-item-p element-item transition photo style design col-md-6 col-sm-6"
-                                    data-category="transition" style="position: absolute; left: 880px; top: 509.516px;">
-                                    <!-- single portfolio-item -->
-                                    <div class="tmp-single-portfolio-item">
-                                        <a href="<?php echo e(route('projects-details')); ?>" class="thumbnail">
-                                            <img src="<?php echo e(asset('assets/images/product/06.jpg')); ?>"src="<?php echo e(asset('assets/images/product/06.jpg')); ?>"
-                                                alt="personal_portfolio">
-                                        </a>
-                                        <div class="tmp-inner-content">
-                                            <div class="top-item">
-                                                <span class="left">Mobile App Design</span>
-                                                <span class="left">25 likes</span>
+                                    <div class="swiper-slide">
+                                        <!-- single product area start -->
+                                        <div class="signle-product-start"
+                                            data-tmp-cursor="lg text-secondary transparent fw-bold"
+                                            data-tmp-cursor-icon="fa-solid fa-arrow-up-right">
+                                            <a class="thumbnail">
+                                                <img src="<?php echo e(asset('assets/images/portfolio/portfolio-4.png')); ?>"src="<?php echo e(asset('assets/images/services/section-custom-menubar.png')); ?>"
+                                                    alt="corporate_business">
+                                            </a>
+                                            <div class="inner-content">
+                                                <a>
+                                                    <h5 class="title">Executive Layout Set</h5>
+                                                </a>
+                                                <span class="designation">Financial advisory</span>
+                                                <div class="tag"></div>
                                             </div>
-                                            <a href="<?php echo e(route('projects-details')); ?>">
-                                                <h2 class="title">Mobile App Design UI/UX <br>
-                                                    In Figma</h2>
-                                            </a>
                                         </div>
+                                        <!-- single product area end -->
                                     </div>
-                                    <!-- single portfolio-item end -->
+                                    <div class="swiper-slide">
+                                        <!-- single product area start -->
+                                        <div class="signle-product-start"
+                                            data-tmp-cursor="lg text-secondary transparent fw-bold"
+                                            data-tmp-cursor-icon="fa-solid fa-arrow-up-right">
+                                            <a class="thumbnail">
+                                                <img src="<?php echo e(asset('assets/images/portfolio/portfolio-5.png')); ?>"src="<?php echo e(asset('assets/images/services/section-custom-menubar.png')); ?>"
+                                                    alt="corporate_business">
+                                            </a>
+                                            <div class="inner-content">
+                                                <a>
+                                                    <h5 class="title">Professional Design</h5>
+                                                </a>
+                                                <span class="designation">Financial advisory</span>
+                                                <div class="tag"></div>
+                                            </div>
+                                        </div>
+                                        <!-- single product area end -->
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <!-- single product area start -->
+                                        <div class="signle-product-start"
+                                            data-tmp-cursor="lg text-secondary transparent fw-bold"
+                                            data-tmp-cursor-icon="fa-solid fa-arrow-up-right">
+                                            <a class="thumbnail">
+                                                <img src="<?php echo e(asset('assets/images/portfolio/portfolio-6.png')); ?>"src="<?php echo e(asset('assets/images/services/section-custom-menubar.png')); ?>"
+                                                    alt="corporate_business">
+                                            </a>
+                                            <div class="inner-content">
+                                                <a>
+                                                    <h5 class="title">Business Layout Library</h5>
+                                                </a>
+                                                <span class="designation">Financial advisory</span>
+                                                <div class="tag"></div>
+                                            </div>
+                                        </div>
+                                        <!-- single product area end -->
+                                    </div>
                                 </div>
-
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-next" data-tmp-cursor="md transparent fw-bold"
+                                    data-tmp-cursor-text="Next"></div>
+                                <div class="swiper-button-prev" data-tmp-cursor="md transparent fw-bold"
+                                    data-tmp-cursor-text="Prev"></div>
                             </div>
                         </div>
+                        <!-- product swiper area end -->
                     </div>
                 </div>
             </div>
