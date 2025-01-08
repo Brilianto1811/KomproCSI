@@ -19,3 +19,27 @@
 <script src="{{ asset('assets/js/vendor/contact-form.js') }}"></script>
 <!-- custom Js -->
 <script src="{{ asset('assets/js/main.js') }}"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 5, // Jumlah slide yang ditampilkan sekaligus
+        spaceBetween: 30, // Jarak antar slide
+        loop: true, // Untuk looping slider
+        autoplay: {
+            delay: 2500, // Waktu per slide (dalam milidetik)
+            disableOnInteraction: false, // Tetap autoplay meskipun user berinteraksi
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true, // Pagination dapat diklik
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 10, // Tampilan 2 slide pada layar lebih kecil
+            },
+            480: {
+                slidesPerView: 1, // Tampilan 1 slide pada layar lebih kecil
+            }
+        }
+    });
+</script>

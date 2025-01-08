@@ -20964,4 +20964,20 @@ body.loaded {
   background-image: none !important;
 }
 
+.swiper-container {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    max-width: 100px; /* Sesuaikan ukuran logo */
+    margin: 0 10px;
+}
+
 /*# sourceMappingURL=style.css.map */

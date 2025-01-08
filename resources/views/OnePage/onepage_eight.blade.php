@@ -80,7 +80,8 @@
                             Business, Environmental, and Social Consulting Experts
                         </span>
                         <h1 class="title">PT Catur Samasta Indonusa</h1>
-                        <p>PT Catur Samasta Indonusa adalah perusahaan konsultan yang bergerak di bidang manajemen,
+                        <p style="text-align: justify">PT Catur Samasta Indonusa adalah perusahaan konsultan yang bergerak
+                            di bidang manajemen,
                             lingkungan, dan sosial. Kami menyediakan berbagai layanan seperti feasibility study, tata ruang,
                             survei potensi hutan, social impact assessment, serta kajian sosial ekonomi budaya masyarakat.
                             Dengan tim profesional dan berpengalaman, kami berkomitmen memberikan solusi yang inovatif,
@@ -111,13 +112,14 @@
                     data-sal-duration="800">
                     <div class="service-inner financial-service-inner agency-service feature-service">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/services/agency-6.svg') }}"src="{{ asset('assets/images/services/agency-6.svg') }}"
-                                alt="corporate_Business_Services_agency">
+                            <img src="{{ asset('assets/images/services/logo_konsultasi.png') }}"src="{{ asset('assets/images/services/logo_konsultasi.png') }}"
+                                alt="corporate_Business_Services_agency" width="150" height="50">
                         </div>
                         <div class="content">
-                            <h2 class="title">Strategi Pengelolaan Hutan</h2>
+                            <h2 class="title">Konsultasi Multidisiplin Profesional dan Kredibel</h2>
                             <p class="description">
-                                Solusi strategis untuk pengelolaan hutan yang berkelanjutan.
+                                Menyediakan layanan jasa konsultasi multidisiplin yang mengedepankan profesionalisme dan
+                                kredibilitas.
                             </p>
                             <div class="three--dot">
                                 <div class="dot dot-one"></div>
@@ -132,14 +134,14 @@
                     data-sal-duration="800">
                     <div class="service-inner financial-service-inner agency-service feature-service">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/services/agency-1.svg') }}"src="{{ asset('assets/images/services/agency-1.svg') }}"
-                                alt="corporate_Business_Services_agency">
+                            <img src="{{ asset('assets/images/services/logo_solusi.png') }}"src="{{ asset('assets/images/services/logo_solusi.png') }}"
+                                alt="corporate_Business_Services_agency" width="150" height="50">
 
                         </div>
                         <div class="content">
-                            <h2 class="title">Desain Sistem Informasi Kehutanan</h2>
+                            <h2 class="title">Solusi Terbaik dan Menyeluruh untuk Pelanggan</h2>
                             <p class="description">
-                                Pengembangan sistem informasi yang terintegrasi dan efisien.
+                                Menjadi rekanan yang memberikan solusi terbaik dan menyeluruh kepada pelanggan/pengguna.
                             </p>
                             <div class="three--dot">
                                 <div class="dot dot-one"></div>
@@ -154,14 +156,14 @@
                     data-sal-duration="800">
                     <div class="service-inner financial-service-inner agency-service feature-service">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/services/agency-2.svg') }}"src="{{ asset('assets/images/services/agency-2.svg') }}"
-                                alt="corporate_Business_Services_Agency">
+                            <img src="{{ asset('assets/images/services/logo_kepuasan2.png') }}"src="{{ asset('assets/images/services/logo_kepuasan.png') }}"
+                                alt="corporate_Business_Services_Agency" width="150" height="50">
 
                         </div>
                         <div class="content">
-                            <h2 class="title">Analisis Data Kehutanan</h2>
+                            <h2 class="title">Kepuasan Pelanggan dengan Kualitas, Kecepatan, dan Ketepatan Waktu</h2>
                             <p class="description">
-                                Pengolahan dan analisis data untuk mendukung pengambilan keputusan.
+                                Memenuhi kepuasan pelanggan dari segi kualitas, cepat, dan tepat waktu.
                             </p>
                             <div class="three--dot">
                                 <div class="dot dot-one"></div>
@@ -176,14 +178,14 @@
                     data-sal-duration="800">
                     <div class="service-inner financial-service-inner agency-service feature-service">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/services/agency-3.svg') }}"src="{{ asset('assets/images/services/agency-3.svg') }}"
-                                alt="corporate_Business_Services_agency">
+                            <img src="{{ asset('assets/images/services/logo_esl.jpg') }}"src="{{ asset('assets/images/services/logo_esl.jpg') }}"
+                                alt="corporate_Business_Services_agency" width="100" height="50">
 
                         </div>
                         <div class="content">
-                            <h2 class="title">Konservasi &amp; Investasi Berkelanjutan</h2>
+                            <h2 class="title">Mitra yang Mengedepankan Aspek Ekonomi, Sosial, dan Lingkungan</h2>
                             <p class="description">
-                                Mendorong investasi yang berorientasi pada konservasi lingkungan.
+                                Berkomitmen untuk menjadi mitra yang mengedepankan aspek ekonomi, sosial, dan lingkungan.
                             </p>
                             <div class="three--dot">
                                 <div class="dot dot-one"></div>
@@ -205,13 +207,14 @@
                 <div class="col-lg-12">
                     <div class="short-discription-between-area">
                         <h2 class="title">
-                            Kami berdedikasi untuk menyediakan layanan konsultasi yang membantu klien kami dalam mencapai
-                            tujuan pengelolaan hutan yang efektif dan berkelanjutan.
+                            Strategi kami yaitu Menggalang kerjasama dan membangun jaringan kerja/networking dengan berbagai
+                            pihak sebagai sebuah kemitraan saling menguntungkan dan berkelanjutan.
                         </h2>
                         <div class="discription-area">
                             <p class="disc">
-                                Dengan pendekatan berbasis riset dan teknologi terkini, kami memastikan setiap solusi yang
-                                diberikan dapat diimplementasikan secara praktis dan berdampak positif.
+                                Meningkatkan kapasitas sumber daya manusia yang ada untuk menjaga kualitas dan membangun
+                                kredibilitas. dan meningkatkan sarana prasarana sesuai dengan kebutuhan dalam rangka
+                                mendukung peningkatan kinerja perusahaan.
                             </p>
                         </div>
                     </div>
@@ -219,16 +222,6 @@
             </div>
         </div>
     </div>
-
-    <div class="col-lg-12" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-        <div class="section-head">
-            <div class="section-sub-title center-title">
-                <span>OUR CLIENTS AND PARTNERS</span>
-            </div>
-            <h2 class="title split-collab">Meet Our Valued Clients and Partners</h2>
-        </div>
-    </div>
-
 
     <!-- about company wrapper -->
     <section class="about-company-area tmp-section-gapBottom" id="about">
@@ -335,6 +328,108 @@
     </div>
     <!-- tmp counterup section area end -->
 
+    <div class="col-lg-12" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800" style="margin-top: -50px;">
+        <div class="section-head">
+            <div class="section-sub-title center-title">
+                <span>OUR CLIENTS AND PARTNERS</span>
+            </div>
+            <h2 class="title split-collab">Meet Our Valued Clients and Partners</h2>
+        </div>
+    </div>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/images/logo/logo_antam.png') }}"src="{{ asset('assets/images/logo/logo_antam.png') }}"
+                    alt="Logo 1">
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/images/logo/logo_ipb.png') }}"src="{{ asset('assets/images/logo/logo_ipb.png') }}"
+                    alt="Logo 2">
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/images/logo/logo_genting.png') }}"src="{{ asset('assets/images/logo/logo_genting.png') }}"
+                    alt="Logo 3">
+            </div>
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/images/logo/logo_asj.png') }}"src="{{ asset('assets/images/logo/logo_asj.png') }}"
+                    alt="Logo 4">
+            </div>
+            <!-- Slide 5 -->
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/images/logo/logo_fsl.png') }}"src="{{ asset('assets/images/logo/logo_fsl.png') }}"
+                    alt="Logo 5">
+            </div>
+            <!-- Slide 6 -->
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/images/logo/logo_golden.jpeg') }}"src="{{ asset('assets/images/logo/logo_golden.jpeg') }}"
+                    alt="Logo 6">
+            </div>
+            <!-- Slide 7 -->
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/images/logo/logo_inhutani.png') }}"src="{{ asset('assets/images/logo/logo_inhutani.png') }}"
+                    alt="Logo 7">
+            </div>
+            <!-- Slide 8 -->
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/images/logo/logo_julong.png') }}"src="{{ asset('assets/images/logo/logo_julong.png') }}"
+                    alt="Logo 8">
+            </div>
+            <!-- Slide 9 -->
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/images/logo/logo_kjg.png') }}"src="{{ asset('assets/images/logo/logo_kjg.png') }}"
+                    alt="Logo 9">
+            </div>
+            <!-- Slide 10 -->
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/images/logo/logo_klhk.png') }}"src="{{ asset('assets/images/logo/logo_klhk.png') }}"
+                    alt="Logo 10">
+            </div>
+            <!-- Slide 11 -->
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/images/logo/logo_ksk.png') }}"src="{{ asset('assets/images/logo/logo_ksk.png') }}"
+                    alt="Logo 11">
+            </div>
+            <!-- Slide 12 -->
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/images/logo/logo_mcai.png') }}"src="{{ asset('assets/images/logo/logo_mcai.png') }}"
+                    alt="Logo 12">
+            </div>
+            <!-- Slide 13 -->
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/images/logo/logo_msl.jpeg') }}"src="{{ asset('assets/images/logo/logo_msl.jpeg') }}"
+                    alt="Logo 13">
+            </div>
+            <!-- Slide 14 -->
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/images/logo/logo_pertamina.png') }}"src="{{ asset('assets/images/logo/logo_pertamina.png') }}"
+                    alt="Logo 14">
+            </div>
+            <!-- Slide 15 -->
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/images/logo/logo_pupuk.png') }}"src="{{ asset('assets/images/logo/logo_pupuk.png') }}"
+                    alt="Logo 15">
+            </div>
+            <!-- Slide 16 -->
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/images/logo/logo_RNI.png') }}"src="{{ asset('assets/images/logo/logo_RNI.png') }}"
+                    alt="Logo 16">
+            </div>
+            <!-- Slide 16 -->
+            <div class="swiper-slide">
+                <img src="{{ asset('assets/images/logo/logo_sel.png') }}"src="{{ asset('assets/images/logo/logo_sel.png') }}"
+                    alt="Logo 16">
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
     <!-- rmp portfolio mesonary area -->
     <div class="tmp-portfolio-area tmp-section-gapBottom" id="portfolio">
         <div class="tmp-product-area tmp-section-gapTop bg-product-1">
@@ -342,7 +437,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-head color-white">
-                            <div class="section-sub-title center-title">
+                            <div class="section-sub-title center-title" style="margin-top: -100px">
                                 <span class="subtitle">OUR PORTFOLIO</span>
                             </div>
                             <h2 class="title split-collab">Let's Check Our Best Works </h2>
@@ -473,11 +568,6 @@
                                         <!-- single product area end -->
                                     </div>
                                 </div>
-                                <div class="swiper-pagination"></div>
-                                <div class="swiper-button-next" data-tmp-cursor="md transparent fw-bold"
-                                    data-tmp-cursor-text="Next"></div>
-                                <div class="swiper-button-prev" data-tmp-cursor="md transparent fw-bold"
-                                    data-tmp-cursor-text="Prev"></div>
                             </div>
                         </div>
                         <!-- product swiper area end -->

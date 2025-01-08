@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="<?php echo e(asset('assets/css/vendor/metismenu.css')); ?>">
     <!-- custom css -->
     <link rel="stylesheet" href="<?php echo e(asset('assets/css/style.css')); ?>">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
 </head>
 <?php /**PATH C:\Users\ACER\Documents\PROJEK WEB CSI\KomproCSI\resources\views/components/head.blade.php ENDPATH**/ ?>
