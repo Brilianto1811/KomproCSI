@@ -9,6 +9,7 @@
         "intervention/image": "*",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
+        "spatie/image": "^3.7",
         "symfony/asset": "^7.1"
     },
     "require-dev": {

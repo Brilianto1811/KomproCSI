@@ -6,7 +6,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MultipagesController;
 use App\Http\Controllers\OnePageController;
 use App\Http\Controllers\CsiUserController;
-
+use App\Http\Controllers\CsiProyekController;
+use App\Models\CsiProyek;
+use App\Repositories\CsiProyekRepository;
 
 Route::get('/', function () {
     return redirect()->route('onepage-eight');
@@ -67,6 +69,16 @@ Route::prefix('CSI/')->group(function () {
         Route::get('/user/{id}/edit-password', 'editPassword')->name('user.editPassword');
         Route::post('/user/{id}/update-password', 'updatePassword')->name('user.updatePassword');
         Route::delete('/user/{id}/delete', 'destroy')->name('user.destroy');
+    });
+
+    Route::controller(CsiProyekController::class)->group(function () {
+        Route::get('/proyek', 'index')->name('proyek.index');
+        Route::get('/proyek/create', 'create')->name('proyek.create');
+        Route::post('/proyek', 'store')->name('proyek.store');
+        Route::get('/proyek-detail/{uid_proyek}', 'show')->name('proyek.show');
+        Route::get('/proyek/{uid_proyek}/edit', 'edit')->name('proyek.edit');
+        Route::put('/proyek/{uid_proyek}', 'update')->name('proyek.update');
+        Route::delete('/proyek/{uid_proyek}', 'destroy')->name('proyek.destroy');
     });
 });
 

@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Repositories\Eloquent;
 
 use App\Models\CsiProyek;
+use App\Repositories\Contracts\CsiProyekRepositoryInterface;
 
 class CsiProyekRepository implements CsiProyekRepositoryInterface
 {
@@ -11,9 +12,9 @@ class CsiProyekRepository implements CsiProyekRepositoryInterface
         return CsiProyek::all();
     }
 
-    public function getById(int $id): ?object
+    public function getByUid(string $uid_proyek): ?object
     {
-        return CsiProyek::find($id);
+        return CsiProyek::where('uid_proyek', $uid_proyek)->first(); // Pastikan ini ada
     }
 
     public function create(array $data): object
@@ -21,23 +22,27 @@ class CsiProyekRepository implements CsiProyekRepositoryInterface
         return CsiProyek::create($data);
     }
 
-    public function update(int $id, array $data): bool
+    public function update(string $uid_proyek, array $data): bool
     {
-        $proyek = CsiProyek::find($id);
+        // Mencari proyek berdasarkan uid_proyek
+        $proyek = CsiProyek::where('uid_proyek', $uid_proyek)->first();
         if (!$proyek) {
-            return false;
+            return false; // Jika proyek tidak ditemukan, mengembalikan false
         }
 
+        // Mengupdate proyek yang ditemukan dengan data baru
         return $proyek->update($data);
     }
 
-    public function delete(int $id): bool
+    public function delete(string $uid_proyek): bool
     {
-        $proyek = CsiProyek::find($id);
+        // Mencari proyek berdasarkan uid_proyek
+        $proyek = CsiProyek::where('uid_proyek', $uid_proyek)->first();
         if (!$proyek) {
-            return false;
+            return false; // Jika proyek tidak ditemukan, mengembalikan false
         }
 
+        // Menghapus proyek yang ditemukan
         return $proyek->delete();
     }
 }
