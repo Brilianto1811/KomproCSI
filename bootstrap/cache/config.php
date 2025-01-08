@@ -11,12 +11,12 @@
     'url' => 'http://localhost',
     'frontend_url' => 'http://localhost:3000',
     'asset_url' => NULL,
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Jakarta',
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
     'cipher' => 'AES-256-CBC',
-    'key' => 'base64:vn2oCJg5austkw7TDBOfJ7QNfJSPOk4ODayURazjqBM=',
+    'key' => 'base64:I8s+qouXs1l7XWnhPF2uHABj98CDAscNcIH9wqSyBCM=',
     'previous_keys' => 
     array (
     ),
@@ -153,8 +153,8 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'D:\\RIAN FILE!!!\\PROJEK WEB CSI\\bizperlaravel-10\\bizperlaravel-10\\Bizper\\storage\\framework/cache/data',
-        'lock_path' => 'D:\\RIAN FILE!!!\\PROJEK WEB CSI\\bizperlaravel-10\\bizperlaravel-10\\Bizper\\storage\\framework/cache/data',
+        'path' => 'D:\\Gawe\\cp-pt-csi\\KomproCSI\\storage\\framework/cache/data',
+        'lock_path' => 'D:\\Gawe\\cp-pt-csi\\KomproCSI\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -202,14 +202,14 @@
   ),
   'database' => 
   array (
-    'default' => 'sqlite',
+    'default' => 'mysql',
     'connections' => 
     array (
       'sqlite' => 
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'D:\\RIAN FILE!!!\\PROJEK WEB CSI\\bizperlaravel-10\\bizperlaravel-10\\Bizper\\database\\database.sqlite',
+        'database' => 'db_csi',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -219,12 +219,12 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'laravel',
+        'database' => 'db_csi',
         'username' => 'root',
         'password' => '',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
-        'collation' => 'utf8mb4_0900_ai_ci',
+        'collation' => 'utf8mb4_unicode_ci',
         'prefix' => '',
         'prefix_indexes' => true,
         'strict' => true,
@@ -239,7 +239,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'laravel',
+        'database' => 'db_csi',
         'username' => 'root',
         'password' => '',
         'unix_socket' => '',
@@ -258,8 +258,8 @@
         'driver' => 'pgsql',
         'url' => NULL,
         'host' => '127.0.0.1',
-        'port' => '5432',
-        'database' => 'laravel',
+        'port' => '3306',
+        'database' => 'db_csi',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -272,9 +272,9 @@
       array (
         'driver' => 'sqlsrv',
         'url' => NULL,
-        'host' => 'localhost',
-        'port' => '1433',
-        'database' => 'laravel',
+        'host' => '127.0.0.1',
+        'port' => '3306',
+        'database' => 'db_csi',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -323,13 +323,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\RIAN FILE!!!\\PROJEK WEB CSI\\bizperlaravel-10\\bizperlaravel-10\\Bizper\\storage\\app',
+        'root' => 'D:\\Gawe\\cp-pt-csi\\KomproCSI\\storage\\app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\RIAN FILE!!!\\PROJEK WEB CSI\\bizperlaravel-10\\bizperlaravel-10\\Bizper\\storage\\app/public',
+        'root' => 'D:\\Gawe\\cp-pt-csi\\KomproCSI\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -349,7 +349,7 @@
     ),
     'links' => 
     array (
-      'D:\\RIAN FILE!!!\\PROJEK WEB CSI\\bizperlaravel-10\\bizperlaravel-10\\Bizper\\public\\storage' => 'D:\\RIAN FILE!!!\\PROJEK WEB CSI\\bizperlaravel-10\\bizperlaravel-10\\Bizper\\storage\\app/public',
+      'D:\\Gawe\\cp-pt-csi\\KomproCSI\\public\\storage' => 'D:\\Gawe\\cp-pt-csi\\KomproCSI\\storage\\app/public',
     ),
   ),
   'logging' => 
@@ -374,14 +374,14 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'D:\\RIAN FILE!!!\\PROJEK WEB CSI\\bizperlaravel-10\\bizperlaravel-10\\Bizper\\storage\\logs/laravel.log',
+        'path' => 'D:\\Gawe\\cp-pt-csi\\KomproCSI\\storage\\logs/laravel.log',
         'level' => 'debug',
         'replace_placeholders' => true,
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'D:\\RIAN FILE!!!\\PROJEK WEB CSI\\bizperlaravel-10\\bizperlaravel-10\\Bizper\\storage\\logs/laravel.log',
+        'path' => 'D:\\Gawe\\cp-pt-csi\\KomproCSI\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
         'replace_placeholders' => true,
@@ -446,7 +446,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'D:\\RIAN FILE!!!\\PROJEK WEB CSI\\bizperlaravel-10\\bizperlaravel-10\\Bizper\\storage\\logs/laravel.log',
+        'path' => 'D:\\Gawe\\cp-pt-csi\\KomproCSI\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -522,7 +522,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'D:\\RIAN FILE!!!\\PROJEK WEB CSI\\bizperlaravel-10\\bizperlaravel-10\\Bizper\\resources\\views/vendor/mail',
+        0 => 'D:\\Gawe\\cp-pt-csi\\KomproCSI\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -576,13 +576,13 @@
     ),
     'batching' => 
     array (
-      'database' => 'sqlite',
+      'database' => 'mysql',
       'table' => 'job_batches',
     ),
     'failed' => 
     array (
       'driver' => 'database-uuids',
-      'database' => 'sqlite',
+      'database' => 'mysql',
       'table' => 'failed_jobs',
     ),
   ),
@@ -617,7 +617,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'D:\\RIAN FILE!!!\\PROJEK WEB CSI\\bizperlaravel-10\\bizperlaravel-10\\Bizper\\storage\\framework/sessions',
+    'files' => 'D:\\Gawe\\cp-pt-csi\\KomproCSI\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -739,9 +739,9 @@
   array (
     'paths' => 
     array (
-      0 => 'D:\\RIAN FILE!!!\\PROJEK WEB CSI\\bizperlaravel-10\\bizperlaravel-10\\Bizper\\resources\\views',
+      0 => 'D:\\Gawe\\cp-pt-csi\\KomproCSI\\resources\\views',
     ),
-    'compiled' => 'D:\\RIAN FILE!!!\\PROJEK WEB CSI\\bizperlaravel-10\\bizperlaravel-10\\Bizper\\storage\\framework\\views',
+    'compiled' => 'D:\\Gawe\\cp-pt-csi\\KomproCSI\\storage\\framework\\views',
   ),
   'flare' => 
   array (
@@ -827,7 +827,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => 'D:\\RIAN FILE!!!\\PROJEK WEB CSI\\bizperlaravel-10\\bizperlaravel-10\\Bizper',
+    'remote_sites_path' => 'D:\\Gawe\\cp-pt-csi\\KomproCSI',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',
