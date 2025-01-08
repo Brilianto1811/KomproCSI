@@ -37,16 +37,22 @@
                         $fileExtension = pathinfo($file, PATHINFO_EXTENSION);
                     @endphp
                     @if ($fileExtension === 'pdf')
-                        <!-- Untuk PDF, kita tampilkan dengan iframe -->
-                        <iframe src="{{ url('storage/files/' . $file) }}" width="100%" height="600px"></iframe>
+                        <!-- Untuk PDF, kita tampilkan dengan object -->
+                        <object data="{{ url('/' . $file) }}" type="application/pdf" width="100%" height="600px">
+                            <p>PDF tidak dapat ditampilkan. <a href="{{ url('/' . $file) }}" target="_blank">Unduh
+                                    file PDF</a></p>
+                        </object>
                     @elseif (in_array($fileExtension, ['jpg', 'jpeg', 'png']))
                         <!-- Untuk gambar, kita tampilkan menggunakan tag img -->
-                        <img src="{{ url('storage/files/' . $file) }}" alt="File Proyek" class="img-fluid">
-                    @elseif (in_array($fileExtension, ['pdf', 'doc', 'docx']))
+                        <img src="{{ url('/' . $file) }}" alt="File Proyek" class="img-fluid">
+                    @elseif (in_array($fileExtension, ['doc', 'docx']))
                         <!-- Untuk dokumen Word, kita tampilkan menggunakan Google Docs Viewer -->
-                        <iframe src="https://docs.google.com/gview?url={{ ('storage/files/' . $file) }}&embedded=true"
-                            width="100%" height="600px">
-                        </iframe>
+                        <div>
+                            <a href="https://docs.google.com/gview?url={{ urlencode(url('/' . $file)) }}&embedded=true"
+                                target="_blank">
+                                Lihat dokumen Word
+                            </a>
+                        </div>
                     @else
                         <p>Tipe file tidak dikenali.</p>
                     @endif
@@ -55,7 +61,6 @@
                 <p>Tidak ada file.</p>
             @endif
         </div>
-
 
         <div class="mb-4">
             <strong>Bukti Proyek:</strong>
