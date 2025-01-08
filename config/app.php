@@ -123,4 +123,14 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    // 'providers' => [
+    //     // Provider lainnya...
+    //     Intervention\Image\ImageServiceProvider::class,
+    // ],
+
+    // 'aliases' => [
+    //     // Alias lainnya...
+    //     'Image' => Intervention\Image\Facades\Image::class,
+    // ],
+
 ];

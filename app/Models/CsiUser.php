@@ -15,4 +15,9 @@ class CsiUser extends Model
     protected $primaryKey = 'id_user';
     public $incrementing = true;
     protected $fillable = ['username_user', 'email_user', 'password', 'id_role'];
+
+    public function proyek()
+    {
+        return $this->hasMany(CsiProyek::class, 'id_user', 'id_user');
+    }
 }

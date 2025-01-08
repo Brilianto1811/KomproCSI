@@ -1,11 +1,9 @@
-@extends('layouts.layout2')
-
-@php
+<?php
     $bodyClass = 'onepage';
-@endphp
+?>
 
 
-@section('content')
+<?php $__env->startSection('content'); ?>
     <!-- tmp header area  -->
     <header class="header-solid header--sticky">
         <div class="container">
@@ -13,8 +11,8 @@
                 <div class="col-lg-12">
                     <div class="header-solid-main-wrapper">
                         <div class="logo-area-start">
-                            <a class="logo" href="{{ route('onepage-eight') }}">
-                                <img src="{{ asset('assets/images/logo/csi_logo2.png') }}" alt="Corporate_business_logo"
+                            <a class="logo" href="<?php echo e(route('onepage-eight')); ?>">
+                                <img src="<?php echo e(asset('assets/images/logo/csi_logo2.png')); ?>" alt="Corporate_business_logo"
                                     width="75" height="50">
                             </a>
                         </div>
@@ -52,7 +50,7 @@
                         </div>
                         <div class="actions-area">
 
-                            {{-- <a href="#" class="tmp-btn btn-primary">Buy Now</a> --}}
+                            
                             <div class="tmp-side-collups-area" id="side-collups">
                                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -68,7 +66,26 @@
         </div>
     </header>
     <!-- tmp header area end -->
-    <x-sidebar />
+    <?php if (isset($component)) { $__componentOriginal2880b66d47486b4bfeaf519598a469d6 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal2880b66d47486b4bfeaf519598a469d6 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sidebar','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('sidebar'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal2880b66d47486b4bfeaf519598a469d6)): ?>
+<?php $attributes = $__attributesOriginal2880b66d47486b4bfeaf519598a469d6; ?>
+<?php unset($__attributesOriginal2880b66d47486b4bfeaf519598a469d6); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal2880b66d47486b4bfeaf519598a469d6)): ?>
+<?php $component = $__componentOriginal2880b66d47486b4bfeaf519598a469d6; ?>
+<?php unset($__componentOriginal2880b66d47486b4bfeaf519598a469d6); ?>
+<?php endif; ?>
 
     <!-- tmp banner area -->
     <section class="section-banner-area-start tmp-section-gapTop pt_sm--10 pb--40" id="home">
@@ -95,7 +112,7 @@
                 </div>
                 <div class="col-lg-6 order-xl-2 order-md-1 order-sm-1 order-1 mb_md--30 mb_sm--30">
                     <div class="frame-image-about-company">
-                        <img src="{{ asset('assets/images/logo/wp1.jpg') }}"src="{{ asset('assets/images/logo/wp1.jpg') }}"
+                        <img src="<?php echo e(asset('assets/images/logo/wp1.jpg')); ?>"src="<?php echo e(asset('assets/images/logo/wp1.jpg')); ?>"
                             alt="Banner Images">
                     </div>
                 </div>
@@ -111,7 +128,7 @@
                     data-sal-duration="800">
                     <div class="service-inner financial-service-inner agency-service feature-service">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/services/agency-6.svg') }}"src="{{ asset('assets/images/services/agency-6.svg') }}"
+                            <img src="<?php echo e(asset('assets/images/services/agency-6.svg')); ?>"src="<?php echo e(asset('assets/images/services/agency-6.svg')); ?>"
                                 alt="corporate_Business_Services_agency">
                         </div>
                         <div class="content">
@@ -132,7 +149,7 @@
                     data-sal-duration="800">
                     <div class="service-inner financial-service-inner agency-service feature-service">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/services/agency-1.svg') }}"src="{{ asset('assets/images/services/agency-1.svg') }}"
+                            <img src="<?php echo e(asset('assets/images/services/agency-1.svg')); ?>"src="<?php echo e(asset('assets/images/services/agency-1.svg')); ?>"
                                 alt="corporate_Business_Services_agency">
 
                         </div>
@@ -154,7 +171,7 @@
                     data-sal-duration="800">
                     <div class="service-inner financial-service-inner agency-service feature-service">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/services/agency-2.svg') }}"src="{{ asset('assets/images/services/agency-2.svg') }}"
+                            <img src="<?php echo e(asset('assets/images/services/agency-2.svg')); ?>"src="<?php echo e(asset('assets/images/services/agency-2.svg')); ?>"
                                 alt="corporate_Business_Services_Agency">
 
                         </div>
@@ -176,7 +193,7 @@
                     data-sal-duration="800">
                     <div class="service-inner financial-service-inner agency-service feature-service">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/services/agency-3.svg') }}"src="{{ asset('assets/images/services/agency-3.svg') }}"
+                            <img src="<?php echo e(asset('assets/images/services/agency-3.svg')); ?>"src="<?php echo e(asset('assets/images/services/agency-3.svg')); ?>"
                                 alt="corporate_Business_Services_agency">
 
                         </div>
@@ -255,13 +272,13 @@
                     </ul>
                     <div class="view-more-button mt--35 sal-animate d-flex" data-sal="slide-up" data-sal-duration="700"
                         data-sal-delay="300">
-                        <a class="tmp-btn btn-primary" href="{{ route('contact') }}">Contact With Us</a>
+                        <a class="tmp-btn btn-primary" href="<?php echo e(route('contact')); ?>">Contact With Us</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="thumbnail image-right-content">
-                    <img src="{{ asset('assets/images/about/about-large.jpg') }}"src="{{ asset('assets/images/about/about-large.jpg') }}"
+                    <img src="<?php echo e(asset('assets/images/about/about-large.jpg')); ?>"src="<?php echo e(asset('assets/images/about/about-large.jpg')); ?>"
                         alt="split Images">
                 </div>
             </div>
@@ -277,7 +294,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 counter__anim">
                     <div class="single-counterup-area-agency">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/counter/05.svg') }}"src="{{ asset('assets/images/counter/05.svg') }}"
+                            <img src="<?php echo e(asset('assets/images/counter/05.svg')); ?>"src="<?php echo e(asset('assets/images/counter/05.svg')); ?>"
                                 alt="agency-service">
                         </div>
                         <div class="information">
@@ -291,7 +308,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 counter__anim">
                     <div class="single-counterup-area-agency">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/counter/08.svg') }}"src="{{ asset('assets/images/counter/08.svg') }}"
+                            <img src="<?php echo e(asset('assets/images/counter/08.svg')); ?>"src="<?php echo e(asset('assets/images/counter/08.svg')); ?>"
                                 alt="agency-service">
                         </div>
                         <div class="information">
@@ -305,7 +322,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 counter__anim">
                     <div class="single-counterup-area-agency">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/counter/06.svg') }}"src="{{ asset('assets/images/counter/06.svg') }}"
+                            <img src="<?php echo e(asset('assets/images/counter/06.svg')); ?>"src="<?php echo e(asset('assets/images/counter/06.svg')); ?>"
                                 alt="agency-service">
                         </div>
                         <div class="information">
@@ -319,7 +336,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 counter__anim">
                     <div class="single-counterup-area-agency">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/counter/07.svg') }}"src="{{ asset('assets/images/counter/07.svg') }}"
+                            <img src="<?php echo e(asset('assets/images/counter/07.svg')); ?>"src="<?php echo e(asset('assets/images/counter/07.svg')); ?>"
                                 alt="agency-service">
                         </div>
                         <div class="information">
@@ -364,7 +381,7 @@
                                             data-tmp-cursor="lg text-secondary transparent fw-bold"
                                             data-tmp-cursor-icon="fa-solid fa-arrow-up-right">
                                             <a class="thumbnail">
-                                                <img src="{{ asset('assets/images/portfolio/portfolio-1.png') }}"src="{{ asset('assets/images/services/section-custom-menubar.png') }}"
+                                                <img src="<?php echo e(asset('assets/images/portfolio/portfolio-1.png')); ?>"src="<?php echo e(asset('assets/images/services/section-custom-menubar.png')); ?>"
                                                     alt="corporate_business">
                                             </a>
                                             <div class="inner-content">
@@ -383,7 +400,7 @@
                                             data-tmp-cursor="lg text-secondary transparent fw-bold"
                                             data-tmp-cursor-icon="fa-solid fa-arrow-up-right">
                                             <a class="thumbnail">
-                                                <img src="{{ asset('assets/images/portfolio/portfolio-2.png') }}"src="{{ asset('assets/images/services/section-custom-menubar.png') }}"
+                                                <img src="<?php echo e(asset('assets/images/portfolio/portfolio-2.png')); ?>"src="<?php echo e(asset('assets/images/services/section-custom-menubar.png')); ?>"
                                                     alt="corporate_business">
                                             </a>
                                             <div class="inner-content">
@@ -402,7 +419,7 @@
                                             data-tmp-cursor="lg text-secondary transparent fw-bold"
                                             data-tmp-cursor-icon="fa-solid fa-arrow-up-right">
                                             <a class="thumbnail">
-                                                <img src="{{ asset('assets/images/portfolio/portfolio-3.png') }}"src="{{ asset('assets/images/services/section-custom-menubar.png') }}"
+                                                <img src="<?php echo e(asset('assets/images/portfolio/portfolio-3.png')); ?>"src="<?php echo e(asset('assets/images/services/section-custom-menubar.png')); ?>"
                                                     alt="corporate_business">
                                             </a>
                                             <div class="inner-content">
@@ -421,7 +438,7 @@
                                             data-tmp-cursor="lg text-secondary transparent fw-bold"
                                             data-tmp-cursor-icon="fa-solid fa-arrow-up-right">
                                             <a class="thumbnail">
-                                                <img src="{{ asset('assets/images/portfolio/portfolio-4.png') }}"src="{{ asset('assets/images/services/section-custom-menubar.png') }}"
+                                                <img src="<?php echo e(asset('assets/images/portfolio/portfolio-4.png')); ?>"src="<?php echo e(asset('assets/images/services/section-custom-menubar.png')); ?>"
                                                     alt="corporate_business">
                                             </a>
                                             <div class="inner-content">
@@ -440,7 +457,7 @@
                                             data-tmp-cursor="lg text-secondary transparent fw-bold"
                                             data-tmp-cursor-icon="fa-solid fa-arrow-up-right">
                                             <a class="thumbnail">
-                                                <img src="{{ asset('assets/images/portfolio/portfolio-5.png') }}"src="{{ asset('assets/images/services/section-custom-menubar.png') }}"
+                                                <img src="<?php echo e(asset('assets/images/portfolio/portfolio-5.png')); ?>"src="<?php echo e(asset('assets/images/services/section-custom-menubar.png')); ?>"
                                                     alt="corporate_business">
                                             </a>
                                             <div class="inner-content">
@@ -459,7 +476,7 @@
                                             data-tmp-cursor="lg text-secondary transparent fw-bold"
                                             data-tmp-cursor-icon="fa-solid fa-arrow-up-right">
                                             <a class="thumbnail">
-                                                <img src="{{ asset('assets/images/portfolio/portfolio-6.png') }}"src="{{ asset('assets/images/services/section-custom-menubar.png') }}"
+                                                <img src="<?php echo e(asset('assets/images/portfolio/portfolio-6.png')); ?>"src="<?php echo e(asset('assets/images/services/section-custom-menubar.png')); ?>"
                                                     alt="corporate_business">
                                             </a>
                                             <div class="inner-content">
@@ -496,45 +513,45 @@
                     <div class="brand-main-wrapper-company">
                         <div class="tmp-brand-section-start">
                             <a href="#">
-                                <img src="{{ asset('assets/images/brand/01.png') }}"src="{{ asset('assets/images/brand/01.png') }}"
+                                <img src="<?php echo e(asset('assets/images/brand/01.png')); ?>"src="<?php echo e(asset('assets/images/brand/01.png')); ?>"
                                     alt="brand">
                             </a>
                             <a href="#">
-                                <img src="{{ asset('assets/images/brand/02.png') }}"src="{{ asset('assets/images/brand/02.png') }}"
+                                <img src="<?php echo e(asset('assets/images/brand/02.png')); ?>"src="<?php echo e(asset('assets/images/brand/02.png')); ?>"
                                     alt="brand">
                             </a>
                             <a href="#">
-                                <img src="{{ asset('assets/images/brand/03.png') }}"src="{{ asset('assets/images/brand/03.png') }}"
+                                <img src="<?php echo e(asset('assets/images/brand/03.png')); ?>"src="<?php echo e(asset('assets/images/brand/03.png')); ?>"
                                     alt="brand">
                             </a>
                             <a href="#">
-                                <img src="{{ asset('assets/images/brand/08.png') }}"src="{{ asset('assets/images/brand/08.png') }}"
+                                <img src="<?php echo e(asset('assets/images/brand/08.png')); ?>"src="<?php echo e(asset('assets/images/brand/08.png')); ?>"
                                     alt="brand">
                             </a>
                             <a href="#">
-                                <img src="{{ asset('assets/images/brand/05.png') }}"src="{{ asset('assets/images/brand/05.png') }}"
+                                <img src="<?php echo e(asset('assets/images/brand/05.png')); ?>"src="<?php echo e(asset('assets/images/brand/05.png')); ?>"
                                     alt="brand">
                             </a>
                         </div>
                         <div class="tmp-brand-section-start">
                             <a href="#">
-                                <img src="{{ asset('assets/images/brand/06.png') }}"src="{{ asset('assets/images/brand/06.png') }}"
+                                <img src="<?php echo e(asset('assets/images/brand/06.png')); ?>"src="<?php echo e(asset('assets/images/brand/06.png')); ?>"
                                     alt="brand">
                             </a>
                             <a href="#">
-                                <img src="{{ asset('assets/images/brand/07.png') }}"src="{{ asset('assets/images/brand/07.png') }}"
+                                <img src="<?php echo e(asset('assets/images/brand/07.png')); ?>"src="<?php echo e(asset('assets/images/brand/07.png')); ?>"
                                     alt="brand">
                             </a>
                             <a href="#">
-                                <img src="{{ asset('assets/images/brand/08.png') }}"src="{{ asset('assets/images/brand/08.png') }}"
+                                <img src="<?php echo e(asset('assets/images/brand/08.png')); ?>"src="<?php echo e(asset('assets/images/brand/08.png')); ?>"
                                     alt="brand">
                             </a>
                             <a href="#">
-                                <img src="{{ asset('assets/images/brand/09.png') }}"src="{{ asset('assets/images/brand/09.png') }}"
+                                <img src="<?php echo e(asset('assets/images/brand/09.png')); ?>"src="<?php echo e(asset('assets/images/brand/09.png')); ?>"
                                     alt="brand">
                             </a>
                             <a href="#">
-                                <img src="{{ asset('assets/images/brand/10.png') }}"src="{{ asset('assets/images/brand/10.png') }}"
+                                <img src="<?php echo e(asset('assets/images/brand/10.png')); ?>"src="<?php echo e(asset('assets/images/brand/10.png')); ?>"
                                     alt="brand">
                             </a>
                         </div>
@@ -690,8 +707,8 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single-footer-wrapper border-right mr--20">
                             <div class="logo">
-                                <a href="{{ route('onepage-eight') }}">
-                                    <img src="{{ asset('assets/images/logo/logo-02.svg') }}"src="{{ asset('assets/images/logo/logo-02.svg') }}"
+                                <a href="<?php echo e(route('onepage-eight')); ?>">
+                                    <img src="<?php echo e(asset('assets/images/logo/logo-02.svg')); ?>"src="<?php echo e(asset('assets/images/logo/logo-02.svg')); ?>"
                                         alt="logo">
                                 </a>
                             </div>
@@ -723,23 +740,23 @@
                             <h5 class="ft-title">Services</h5>
                             <ul class="ft-link">
                                 <li>
-                                    <a href="{{ route('about') }}">About Company</a>
+                                    <a href="<?php echo e(route('about')); ?>">About Company</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('team') }}">Meet Our Team</a>
+                                    <a href="<?php echo e(route('team')); ?>">Meet Our Team</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('service') }}">Our Services</a>
+                                    <a href="<?php echo e(route('service')); ?>">Our Services</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('blog') }}">News & Media</a>
+                                    <a href="<?php echo e(route('blog')); ?>">News & Media</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('contact') }}">Contact Us</a>
+                                    <a href="<?php echo e(route('contact')); ?>">Contact Us</a>
                                 </li>
 
                                 <li>
-                                    <a href="{{ route('faq') }}">Support</a>
+                                    <a href="<?php echo e(route('faq')); ?>">Support</a>
                                 </li>
 
                             </ul>
@@ -767,7 +784,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="{{ route('faq') }}">Support</a>
+                                    <a href="<?php echo e(route('faq')); ?>">Support</a>
                                 </li>
 
                             </ul>
@@ -779,23 +796,23 @@
                             <h5 class="ft-title">Company</h5>
                             <ul class="ft-link">
                                 <li>
-                                    <a href="{{ route('pricing') }}">Pricing</a>
+                                    <a href="<?php echo e(route('pricing')); ?>">Pricing</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('team') }}">Our Team</a>
+                                    <a href="<?php echo e(route('team')); ?>">Our Team</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('service') }}">Our Services</a>
+                                    <a href="<?php echo e(route('service')); ?>">Our Services</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('blog') }}">News & Media</a>
+                                    <a href="<?php echo e(route('blog')); ?>">News & Media</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('contact') }}">Contact Us</a>
+                                    <a href="<?php echo e(route('contact')); ?>">Contact Us</a>
                                 </li>
 
                                 <li>
-                                    <a href="{{ route('faq') }}">Support</a>
+                                    <a href="<?php echo e(route('faq')); ?>">Support</a>
                                 </li>
 
                             </ul>
@@ -807,23 +824,23 @@
                             <h5 class="ft-title">Quick Link</h5>
                             <ul class="ft-link">
                                 <li>
-                                    <a href="{{ route('about') }}">Company</a>
+                                    <a href="<?php echo e(route('about')); ?>">Company</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('team') }}"> Our Team</a>
+                                    <a href="<?php echo e(route('team')); ?>"> Our Team</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('service') }}">Services</a>
+                                    <a href="<?php echo e(route('service')); ?>">Services</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('blog') }}">News & Media</a>
+                                    <a href="<?php echo e(route('blog')); ?>">News & Media</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('contact') }}">Contact Us</a>
+                                    <a href="<?php echo e(route('contact')); ?>">Contact Us</a>
                                 </li>
 
                                 <li>
-                                    <a href="{{ route('faq') }}">Support</a>
+                                    <a href="<?php echo e(route('faq')); ?>">Support</a>
                                 </li>
 
                             </ul>
@@ -850,5 +867,26 @@
     </div>
     <!-- End Footer Area  -->
 
-    <x-loader />
-@endsection
+    <?php if (isset($component)) { $__componentOriginald5d051f243b37508d39f8ce3d92a5684 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginald5d051f243b37508d39f8ce3d92a5684 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.loader','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('loader'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginald5d051f243b37508d39f8ce3d92a5684)): ?>
+<?php $attributes = $__attributesOriginald5d051f243b37508d39f8ce3d92a5684; ?>
+<?php unset($__attributesOriginald5d051f243b37508d39f8ce3d92a5684); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginald5d051f243b37508d39f8ce3d92a5684)): ?>
+<?php $component = $__componentOriginald5d051f243b37508d39f8ce3d92a5684; ?>
+<?php unset($__componentOriginald5d051f243b37508d39f8ce3d92a5684); ?>
+<?php endif; ?>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.layout2', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\ACER\Documents\PROJEK WEB CSI\KomproCSI\resources\views/OnePage/onepage_eight.blade.php ENDPATH**/ ?>
