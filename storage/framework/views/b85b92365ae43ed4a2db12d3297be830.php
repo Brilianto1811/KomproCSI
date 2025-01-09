@@ -8,9 +8,9 @@
             <div class="alert alert-danger"><?php echo e(session('error')); ?></div>
         <?php endif; ?>
 
-        <a href="<?php echo e(route('proyek.create')); ?>" class="btn btn-primary mb-4">Tambah Proyek Baru</a>
+        <a href="<?php echo e(route('proyek.create')); ?>" class="btn btn-primary mb-6">Tambah Proyek Baru</a>
 
-        <table class="table table-striped">
+        <table class="table">
             <thead>
                 <tr>
                     <th>Judul Proyek</th>
@@ -32,8 +32,7 @@
                         <td>
                             <a href="<?php echo e(route('proyek.show', $item->uid_proyek)); ?>" class="btn btn-info">Lihat</a>
                             <a href="<?php echo e(route('proyek.edit', $item->uid_proyek)); ?>" class="btn btn-warning">Edit</a>
-                            <form action="<?php echo e(route('proyek.destroy', $item->uid_proyek)); ?>" method="POST"
-                                style="display:inline;">
+                            <form action="<?php echo e(route('proyek.destroy', $item->uid_proyek)); ?>" method="POST">
                                 <?php echo csrf_field(); ?>
                                 <?php echo method_field('DELETE'); ?>
                                 <button type="submit" class="btn btn-danger"
@@ -47,4 +46,4 @@
     </div>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.layout2', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Gawe\cp-pt-csi\KomproCSI\resources\views/OnePage/proyek/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.layoutdashboard', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Gawe\cp-pt-csi\KomproCSI\resources\views/OnePage/proyek/index.blade.php ENDPATH**/ ?>

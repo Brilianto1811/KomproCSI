@@ -27,7 +27,7 @@ Route::get('/dashboard', function () {
 // Group Rute dengan Middleware Auth
 Route::prefix('CSI/')->middleware('auth')->group(function () {
     // Rute untuk User (Hanya untuk id_role = 1)
-    Route::controller(CsiUserController::class)->middleware('role:1')->group(function () {
+    Route::controller(CsiUserController::class)->middleware('auth')->group(function () {
         Route::get('/user/data', 'index')->name('user.index');
         Route::get('/user/create', 'create')->name('user.create');
         Route::post('/user/store', 'store')->name('user.store');

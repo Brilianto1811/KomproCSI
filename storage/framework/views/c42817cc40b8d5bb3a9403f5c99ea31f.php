@@ -25,4 +25,9 @@
     </div>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.layout2', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Gawe\cp-pt-csi\KomproCSI\resources\views/dashboard.blade.php ENDPATH**/ ?>
+<?php $__env->startSection('content'); ?>
+    <h1>Selamat Datang di Dashboard</h1>
+    <p>Gunakan menu di sidebar untuk navigasi.</p>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.layoutdashboard', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Gawe\cp-pt-csi\KomproCSI\resources\views/dashboard.blade.php ENDPATH**/ ?>

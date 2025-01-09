@@ -1,6 +1,6 @@
 @extends('layouts.layoutdashboard')
 
-{{-- @section('content')
+@section('content')
     <div class="container text-center mt-5">
         <h1>Dashboard</h1>
         <div class="row justify-content-center mt-4">
@@ -25,7 +25,7 @@
             </form>
         </div>
     </div>
-@endsection --}}
+@endsection
 
 @section('content')
     <h1>Selamat Datang di Dashboard</h1>
