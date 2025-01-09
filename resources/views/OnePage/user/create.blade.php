@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+        <a href="{{ route('dashboard') }}" class="btn btn-secondary mt-2">Kembali ke Dashboard</a>
         <h1>Add User</h1>
         <form action="{{ route('user.store') }}" method="POST">
             @csrf

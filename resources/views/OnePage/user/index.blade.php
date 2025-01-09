@@ -4,6 +4,7 @@
     <div class="container">
         <h1>List of Users</h1>
         <a href="{{ route('user.create') }}" class="btn btn-primary">Add User</a>
+        <a href="{{ route('dashboard') }}" class="btn btn-secondary mt-2">Kembali ke Dashboard</a>
         <table class="table mt-4">
             <thead>
                 <tr>

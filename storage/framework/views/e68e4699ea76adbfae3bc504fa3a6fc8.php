@@ -24,6 +24,14 @@
 
 <body <?php echo (isset($bodyClass) ? 'class="' . $bodyClass .'"': ''); ?>>
 
+    <?php if(session('error')): ?>
+        <div class="alert alert-danger"
+            style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); z-index: 9999;">
+            <?php echo e(session('error')); ?>
+
+        </div>
+    <?php endif; ?>
+
     <?php echo $__env->yieldContent('content'); ?>
 
     <div id="overlay_every-where" data-tmp-cursor="md text-black dark:text-white opacity-10"

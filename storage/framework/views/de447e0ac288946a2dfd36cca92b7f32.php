@@ -1,5 +1,6 @@
 <?php $__env->startSection('content'); ?>
     <div class="container">
+        <a href="<?php echo e(route('dashboard')); ?>" class="btn btn-secondary mt-2">Kembali ke Dashboard</a>
         <h1>Add User</h1>
         <form action="<?php echo e(route('user.store')); ?>" method="POST">
             <?php echo csrf_field(); ?>

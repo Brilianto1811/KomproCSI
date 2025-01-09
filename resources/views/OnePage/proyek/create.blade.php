@@ -58,8 +58,17 @@
             <div class="form-group">
                 <label for="status">Status</label>
                 <select name="status" id="status" class="form-control">
-                    <option value="P" {{ old('status') == 'P' ? 'selected' : '' }}>Publik</option>
-                    <option value="I" {{ old('status') == 'I' ? 'selected' : '' }}>Internal</option>
+                    @if (Auth::check() && Auth::user()->id_role == 1)
+                        <!-- Jika id_role = 1, tampilkan semua pilihan -->
+                        <option value="P" {{ old('status') == 'P' ? 'selected' : '' }}>Publik</option>
+                        <option value="I" {{ old('status') == 'I' ? 'selected' : '' }}>Internal</option>
+                    @elseif(Auth::check() && Auth::user()->id_role == 2)
+                        <!-- Jika id_role = 2, hanya tampilkan 'Internal' -->
+                        <option value="I" {{ old('status') == 'I' ? 'selected' : '' }}>Internal</option>
+                    @else
+                        <!-- Jika tidak ada role, tampilkan pilihan default atau kosong -->
+                        <option value="" disabled selected>Pilih Status</option>
+                    @endif
                 </select>
             </div>
 

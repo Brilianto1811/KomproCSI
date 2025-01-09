@@ -17,8 +17,16 @@ class CsiUserController extends Controller
     }
     public function index()
     {
+        // Cek apakah user yang sedang login memiliki role id_role == 1
+        if (Auth::user()->id_role != 1) {
+            // Jika tidak, arahkan mereka ke halaman dashboard dengan pesan error
+            return redirect()->route('dashboard')->with('error', 'Anda tidak memiliki akses ke menu ini!');
+        }
+
+        // Ambil data user menggunakan repository
         $users = $this->csiUserRepository->getAll();
 
+        // Kembalikan ke view dengan data users
         return view('OnePage.user.index', compact('users'));
     }
 

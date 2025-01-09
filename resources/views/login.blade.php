@@ -7,9 +7,9 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Masukkan Username" required>
-                @error('username')
+                <label for="email_user">Email</label>
+                <input type="email" id="email_user" name="email_user" placeholder="Masukkan Email" required>
+                @error('email_user')
                     <span style="color: red; font-size: 12px;">{{ $message }}</span>
                 @enderror
             </div>

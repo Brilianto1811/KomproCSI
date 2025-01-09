@@ -56,8 +56,17 @@
             <div class="form-group">
                 <label for="status">Status</label>
                 <select name="status" id="status" class="form-control">
-                    <option value="P" <?php echo e(old('status') == 'P' ? 'selected' : ''); ?>>Publik</option>
-                    <option value="I" <?php echo e(old('status') == 'I' ? 'selected' : ''); ?>>Internal</option>
+                    <?php if(Auth::check() && Auth::user()->id_role == 1): ?>
+                        <!-- Jika id_role = 1, tampilkan semua pilihan -->
+                        <option value="P" <?php echo e(old('status') == 'P' ? 'selected' : ''); ?>>Publik</option>
+                        <option value="I" <?php echo e(old('status') == 'I' ? 'selected' : ''); ?>>Internal</option>
+                    <?php elseif(Auth::check() && Auth::user()->id_role == 2): ?>
+                        <!-- Jika id_role = 2, hanya tampilkan 'Internal' -->
+                        <option value="I" <?php echo e(old('status') == 'I' ? 'selected' : ''); ?>>Internal</option>
+                    <?php else: ?>
+                        <!-- Jika tidak ada role, tampilkan pilihan default atau kosong -->
+                        <option value="" disabled selected>Pilih Status</option>
+                    <?php endif; ?>
                 </select>
             </div>
 

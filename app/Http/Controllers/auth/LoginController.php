@@ -15,14 +15,36 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        $credentials = $request->only('username', 'password');
+        $request->validate([
+            'email_user' => 'required|email',
+            'password' => 'required',
+        ]);
 
+        // Gunakan credentials dengan kolom yang sesuai
+        $credentials = [
+            'email_user' => $request->email_user,
+            'password' => $request->password,
+        ];
+
+
+        // Coba autentikasi
         if (Auth::attempt($credentials)) {
+            // Ambil data user yang berhasil login
+            $user = Auth::user();
+
+            // Simpan data penting ke sesi
+            session([
+                'id_user' => $user->id_user,
+                'nama_user' => $user->nama_user,
+                'id_role' => $user->id_role,
+            ]);
+
+            // dd($user);
             return redirect()->intended('/dashboard');
         }
 
         return back()->withErrors([
-            'username' => 'Username atau password salah.',
+            'email_user' => 'Email atau password salah.',
         ]);
     }
 }
