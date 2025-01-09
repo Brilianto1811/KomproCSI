@@ -1,6 +1,6 @@
-@extends('layouts.layout2')
+@extends('layouts.layoutdashboard')
 
-@section('content')
+{{-- @section('content')
     <div class="container text-center mt-5">
         <h1>Dashboard</h1>
         <div class="row justify-content-center mt-4">
@@ -17,4 +17,9 @@
             </div>
         </div>
     </div>
+@endsection --}}
+
+@section('content')
+    <h1>Selamat Datang di Dashboard</h1>
+    <p>Gunakan menu di sidebar untuk navigasi.</p>
 @endsection
