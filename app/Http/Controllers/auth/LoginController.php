@@ -47,4 +47,10 @@ class LoginController extends Controller
             'email_user' => 'Email atau password salah.',
         ]);
     }
+
+    public function logout()
+    {
+        Auth::logout(); // Logout user
+        return redirect('/')->with('success', 'Anda berhasil logout.');
+    }
 }

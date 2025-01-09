@@ -14,6 +14,14 @@
                 <a href="<?php echo e(route('proyek.index')); ?>" class="btn btn-success btn-lg btn-block">Proyek</a>
             </div>
         </div>
+
+        <!-- Tombol Logout -->
+        <div class="mt-5">
+            <form action="<?php echo e(route('logout')); ?>" method="POST">
+                <?php echo csrf_field(); ?>
+                <button type="submit" class="btn btn-danger btn-lg">Logout</button>
+            </form>
+        </div>
     </div>
 <?php $__env->stopSection(); ?>
 

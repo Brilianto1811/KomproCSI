@@ -45,4 +45,9 @@ class CsiProyekRepository implements CsiProyekRepositoryInterface
         // Menghapus proyek yang ditemukan
         return $proyek->delete();
     }
+
+    public function getProyekValidasi(): \Illuminate\Database\Eloquent\Collection
+    {
+        return CsiProyek::where('status_proyek', 'I')->get();  // Ambil semua proyek dengan status 'I'
+    }
 }

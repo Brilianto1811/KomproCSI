@@ -199,4 +199,13 @@ class CsiProyekController extends Controller
 
         return redirect()->route('proyek.index')->with('success', 'Proyek berhasil dihapus!');
     }
+
+    public function showValidasiProyek()
+    {
+        // Mengambil semua proyek dengan status 'I'
+        $proyekValidasi = $this->csiProyekRepository->getProyekValidasi();
+
+        // Menampilkan proyek yang validasi (status 'I')
+        return view('proyek.validasi', compact('proyekValidasi'));
+    }
 }

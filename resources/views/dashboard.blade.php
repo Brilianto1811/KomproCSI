@@ -16,5 +16,13 @@
                 <a href="{{ route('proyek.index') }}" class="btn btn-success btn-lg btn-block">Proyek</a>
             </div>
         </div>
+
+        <!-- Tombol Logout -->
+        <div class="mt-5">
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="btn btn-danger btn-lg">Logout</button>
+            </form>
+        </div>
     </div>
 @endsection
