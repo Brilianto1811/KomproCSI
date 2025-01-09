@@ -1,4 +1,4 @@
-@extends('layouts.layout2')
+@extends('layouts.layoutdashboard')
 
 @section('content')
     <div class="container">
@@ -76,3 +76,6 @@
         </form>
     </div>
 @endsection
+
+<x-scripts />
+<x-head />

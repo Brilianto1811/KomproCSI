@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +28,7 @@
             margin-bottom: 20px;
             text-align: center;
             border-bottom: 1px solid #34495e;
+            color: white;
             padding-bottom: 10px;
         }
 
@@ -170,15 +168,53 @@
         form {
             display: inline;
         }
+
+        .logout-container {
+            position: fixed;
+            bottom: 20px;
+            /* Jarak dari bawah */
+            width: 250px;
+            /* Sama dengan lebar sidebar */
+            text-align: center;
+            background-color: #343a40;
+            /* Opsional, jika ingin sama dengan sidebar */
+            padding: 10px 0;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logout-container form {
+            margin: 0;
+        }
+
+        .logout-container button {
+            width: 90%;
+            /* Opsional, agar lebih proporsional */
+        }
     </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="sidebar">
-        <h2 class="sidebar-title">DASHBOARD</h2>
-        <a href="<?php echo e(route('user.index')); ?>" class="<?php echo e(Request::is('user*') ? 'active' : ''); ?>">Kelola Staff</a>
+        <a href="<?php echo e(route('dashboard')); ?>">
+            <h2 class="sidebar-title">DASHBOARD</h2>
+        </a>
+        <?php if(auth()->user()->id_role == 1): ?>
+            <a href="<?php echo e(route('user.index')); ?>" class="<?php echo e(Request::is('user*') ? 'active' : ''); ?>">Kelola Staff</a>
+        <?php endif; ?>
         <a href="<?php echo e(route('proyek.index')); ?>" class="<?php echo e(Request::is('proyek*') ? 'active' : ''); ?>">Kelola Proyek</a>
     </div>
+
+    <div class="logout-container">
+        <form action="<?php echo e(route('logout')); ?>" method="POST">
+            <?php echo csrf_field(); ?>
+            <button type="submit" class="btn btn-danger btn-lg">
+                <i class="fas fa-power-off"></i> Logout
+            </button>
+        </form>
+    </div>
+
+
     <div class="content">
         <?php echo $__env->yieldContent('content'); ?>
     </div>

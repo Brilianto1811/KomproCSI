@@ -20980,4 +20980,10 @@ body.loaded {
     margin: 0 10px;
 }
 
+.tmp-btn.btn-primary.small-btn {
+    padding: 6px 12px;  /* Mengurangi ukuran padding */
+    font-size: 12px;     /* Ukuran font lebih kecil */
+    border-radius: 4px;  /* Menjaga border-radius agar tetap bulat */
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -2,6 +2,7 @@
     <div class="container">
         <h1>List of Users</h1>
         <a href="<?php echo e(route('user.create')); ?>" class="btn btn-primary">Add User</a>
+        <a href="<?php echo e(route('dashboard')); ?>" class="btn btn-secondary mt-2">Kembali ke Dashboard</a>
         <table class="table mt-4">
             <thead>
                 <tr>
@@ -48,4 +49,4 @@
     </script>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.layout2', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\ACER\Documents\PROJEK WEB CSI\KomproCSI\resources\views/OnePage/user/index.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.layoutdashboard', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\ACER\Documents\PROJEK WEB CSI\KomproCSI\resources\views/OnePage/user/index.blade.php ENDPATH**/ ?>
