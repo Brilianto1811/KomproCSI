@@ -38,7 +38,9 @@ Route::prefix('CSI/')->middleware('auth')->group(function () {
 
     // Rute untuk Proyek (Dapat diakses oleh semua id_role)
     Route::controller(CsiProyekController::class)->group(function () {
-        Route::get('/proyek-publik', 'indexPublik')->name('proyek.indexPublik')->middleware('auth');
+        Route::get('/proyek-publik', 'indexPublik')->name('proyek.indexPublik');
+        Route::get('/proyek-publik', 'indexPublikHome')->name('proyek.indexPublikHome');
+        // Route::get('/proyek-publik', 'indexPublik')->name('proyek.indexPublik')->middleware('auth');
         Route::get('/proyek', 'index')->name('proyek.index');
         Route::get('/proyek/create', 'create')->name('proyek.create');
         Route::post('/proyek', 'store')->name('proyek.store');
@@ -70,6 +72,8 @@ Route::prefix('pages/')->group(function () {
 // OnePage
 Route::prefix('CSI/')->group(function () {
     Route::controller(OnePageController::class)->group(function () {
+        Route::get('Home', 'onePage_eight')->name('onepage-eight');
+        Route::get('/CSI-Proyek/{uid_proyek}', 'showIndexPublik')->name('proyek.showindexpublik');
         Route::get('onepage-one', 'onePage_one')->name('onepage-one');
         Route::get('onepage-two', 'onePage_two')->name('onepage-two');
         Route::get('onepage-three', 'onePage_three')->name('onepage-three');
@@ -77,7 +81,6 @@ Route::prefix('CSI/')->group(function () {
         Route::get('onepage-five', 'onePage_five')->name('onepage-five');
         Route::get('onepage-six', 'onePage_six')->name('onepage-six');
         Route::get('onepage-seven', 'onePage_seven')->name('onepage-seven');
-        Route::get('Home', 'onePage_eight')->name('onepage-eight');
     });
 });
 

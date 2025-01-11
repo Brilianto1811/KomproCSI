@@ -85,4 +85,9 @@ class CsiProyekRepository implements CsiProyekRepositoryInterface
             ->orderBy('created_at', 'desc')
             ->paginate(10);
     }
+
+    public function getProyekPublikHome(): \Illuminate\Database\Eloquent\Collection
+    {
+        return CsiProyek::where('status', 'P')->get();
+    }
 }

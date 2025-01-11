@@ -12,4 +12,5 @@ interface CsiProyekRepositoryInterface
     public function getProyekValidasi(string $searchTerm = null);
     public function getProyekPublik(string $searchTerm = null);
     public function searchProyek(string $searchTerm);
+    public function getProyekPublikHome(): \Illuminate\Database\Eloquent\Collection;
 }

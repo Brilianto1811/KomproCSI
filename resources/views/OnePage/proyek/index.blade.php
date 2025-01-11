@@ -32,6 +32,7 @@
                     <th>Tanggal Mulai</th>
                     <th>Tanggal Selesai</th>
                     <th>Status</th>
+                    <th>Partner</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -43,6 +44,7 @@
                         <td>{{ \Carbon\Carbon::parse($item->tgl_mulai)->format('d-m-Y') }}</td>
                         <td>{{ \Carbon\Carbon::parse($item->tgl_selesai)->format('d-m-Y') }}</td>
                         <td>{{ $item->status == 'P' ? 'Publik' : 'Internal' }}</td>
+                        <td>{{ $item->partner_proyek }}</td>
                         <td>
                             <a href="{{ route('proyek.show', $item->uid_proyek) }}" class="btn btn-info">Lihat</a>
                             <a href="{{ route('proyek.edit', $item->uid_proyek) }}" class="btn btn-warning">Edit</a>

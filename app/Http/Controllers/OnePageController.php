@@ -2,43 +2,38 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CsiProyek;
 use Illuminate\Http\Request;
+use App\Repositories\Contracts\CsiProyekRepositoryInterface;
 use App\Repositories\Contracts\CsiUserRepositoryInterface;
 use Illuminate\Support\Facades\Hash;
 
 class OnePageController extends Controller
 {
-    // protected $csiUserRepository;
+    protected $csiProyekRepository;
 
-    // public function __construct(CsiUserRepositoryInterface $csiUserRepository)
+    public function __construct(CsiProyekRepositoryInterface $csiProyekRepository)
+    {
+        $this->csiProyekRepository = $csiProyekRepository;
+    }
+
+    // public function indexPublikHome()
     // {
-    //     $this->csiUserRepository = $csiUserRepository;
+    //     $proyek = $this->csiProyekRepository->getProyekPublikHome();
+    //     dd($proyek);
+
+    //     return view('OnePage/onepage_eight', compact('proyek'));
     // }
 
-    // public function store(Request $request)
-    // {
-    //     $request->validate([
-    //         'email_user' => [
-    //             'required',
-    //             'email',
-    //             'unique:csi_user,email_user',
-    //         ],
-    //         'password' => 'required|min:6',
-    //     ], [
-    //         'email_user.unique' => 'Email sudah terdaftar, gunakan email lain!',
-    //         'email_user.required' => 'Email wajib diisi!',
-    //         'email_user.email' => 'Masukkan email yang valid!',
-    //         'password.required' => 'Password wajib diisi!',
-    //         'password.min' => 'Password minimal 6 karakter!',
-    //     ]);
+    public function getIndexPublikHome()
+    {
+        // Mengambil semua data proyek dengan status 'I' dari model CsiProyek
+        $proyek = CsiProyek::where('status', 'I')->get();  // Menambahkan kondisi untuk status = 'I'
 
-    //     $this->csiUserRepository->create([
-    //         'email_user' => $request->email_user,
-    //         'password' => Hash::make($request->password),
-    //     ]);
+        // Mengirim data proyek ke tampilan
+        return view('OnePage/onepage_eight', compact('proyek'));
+    }
 
-    //     return redirect()->route('user.create')->with('success', 'User berhasil ditambahkan!');
-    // }
 
     public function onePage_one()
     {
@@ -77,6 +72,26 @@ class OnePageController extends Controller
 
     public function onePage_eight()
     {
-        return view('OnePage/onepage_eight');
+        $proyek = CsiProyek::where('status', 'P')->get();  // Menambahkan kondisi untuk status = 'I'
+
+        // Mengirim data proyek ke tampilan
+        return view('OnePage/onepage_eight', compact('proyek'));
+    }
+
+    // public function show(string $uid_proyek)
+    // {
+    //     $proyek : CsiProyek::
+    //     return view('OnePage/showproyek', compact('proyek'));
+    // }
+
+    public function showIndexPublik(string $uid_proyek)
+    {
+        $proyek = CsiProyek::where('uid_proyek', $uid_proyek)->first();
+        if (!$proyek) {
+            return redirect()->route('proyek.index')->with('error', 'Proyek tidak ditemukan.');
+        }
+
+        // Mengirim data proyek ke tampilan
+        return view('OnePage/showproyek', compact('proyek'));
     }
 }

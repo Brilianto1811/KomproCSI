@@ -28,18 +28,26 @@ class CsiProyekController extends Controller
         $searchTerm = $request->input('search', '');
         $proyek = $this->csiProyekRepository->getProyekValidasi($searchTerm);
 
-        return view('OnePage.proyek.index', compact('proyek'));
+        return view('OnePage.proyek.index', compact('proyek', 'searchTerm'));
     }
 
     public function indexPublik(Request $request)
     {
-        if (Auth::user()->id_role != 1) {
-            return redirect()->route('dashboard')->with('error', 'Anda tidak memiliki akses ke menu ini!');
-        }
+        // if (Auth::user()->id_role != 1) {
+        //     return redirect()->route('dashboard')->with('error', 'Anda tidak memiliki akses ke menu ini!');
+        // }
         $searchTerm = $request->input('search', '');
         $proyek = $this->csiProyekRepository->getProyekPublik($searchTerm);
 
-        return view('OnePage.proyek.indexPublik', compact('proyek'));
+        return view('OnePage.proyek.indexPublik', compact('proyek', 'searchTerm'));
+    }
+
+    public function indexPublikHome()
+    {
+        $proyek = $this->csiProyekRepository->getProyekPublikHome();
+        dd($proyek);
+
+        return view('OnePage.onepage_eight', compact('proyek'));
     }
 
     public function create()
