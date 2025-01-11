@@ -76,7 +76,7 @@
                     @if ($fileExtension === 'pdf')
                         <iframe src="{{ asset($file) }}" width="100%" height="600px"></iframe>
                     @elseif (in_array($fileExtension, ['jpg', 'jpeg', 'png']))
-                        <img src="{{ asset($file) }}" alt="Bukti Proyek" class="img-fluid">
+                        <img src="{{ asset($file) }}" alt="Dokumentasi Proyek" class="img-fluid">
                     @elseif (in_array($fileExtension, ['doc', 'docx']))
                         <iframe src="https://docs.google.com/gview?url={{ urlencode(asset($file)) }}&embedded=true"
                             width="100%" height="600px">

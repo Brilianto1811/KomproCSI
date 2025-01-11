@@ -34,7 +34,7 @@
             </div>
 
             <div class="form-group">
-                <label for="bukti_proyek">Bukti Proyek</label>
+                <label for="bukti_proyek">Dokumentasi Proyek</label>
                 <input type="file" name="bukti_proyek[]" id="bukti_proyek" class="form-control" multiple>
             </div>
 

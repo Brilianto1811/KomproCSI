@@ -39,7 +39,7 @@ Route::prefix('CSI/')->middleware('auth')->group(function () {
     // Rute untuk Proyek (Dapat diakses oleh semua id_role)
     Route::controller(CsiProyekController::class)->group(function () {
         Route::get('/proyek-publik', 'indexPublik')->name('proyek.indexPublik');
-        Route::get('/proyek-publik', 'indexPublikHome')->name('proyek.indexPublikHome');
+        // Route::get('/proyek-publik', 'indexPublikHome')->name('proyek.indexPublikHome');
         // Route::get('/proyek-publik', 'indexPublik')->name('proyek.indexPublik')->middleware('auth');
         Route::get('/proyek', 'index')->name('proyek.index');
         Route::get('/proyek/create', 'create')->name('proyek.create');
