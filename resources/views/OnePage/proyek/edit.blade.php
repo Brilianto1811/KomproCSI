@@ -33,10 +33,33 @@
                 <label for="file_proyek">File Proyek (Opsional)</label>
                 <input type="file" name="file_proyek[]" id="file_proyek" class="form-control" multiple>
                 @if ($proyek->file_proyek)
-                    <div class="mt-2">
-                        <strong>File yang sudah ada:</strong>
-                        <a href="{{ Storage::url($proyek->file_proyek) }}" target="_blank">Unduh File Proyek</a>
-                    </div>
+                    @foreach (explode(',', $proyek->file_proyek) as $file)
+                        @php
+                            $fileExtension = pathinfo($file, PATHINFO_EXTENSION);
+                        @endphp
+                        @if ($fileExtension === 'pdf')
+                            <!-- Untuk PDF, kita tampilkan dengan object -->
+                            <object data="{{ url('/' . $file) }}" type="application/pdf" width="100%" height="600px">
+                                <p>PDF tidak dapat ditampilkan. <a href="{{ url('/' . $file) }}" target="_blank">Unduh
+                                        file PDF</a></p>
+                            </object>
+                        @elseif (in_array($fileExtension, ['jpg', 'jpeg', 'png']))
+                            <!-- Untuk gambar, kita tampilkan menggunakan tag img -->
+                            <img src="{{ url('/' . $file) }}" alt="File Proyek" class="img-fluid">
+                        @elseif (in_array($fileExtension, ['doc', 'docx']))
+                            <!-- Untuk dokumen Word, kita tampilkan menggunakan Google Docs Viewer -->
+                            <div>
+                                <a href="https://docs.google.com/gview?url={{ urlencode(url('/' . $file)) }}&embedded=true"
+                                    target="_blank">
+                                    Lihat dokumen Word
+                                </a>
+                            </div>
+                        @else
+                            <p>Tipe file tidak dikenali.</p>
+                        @endif
+                    @endforeach
+                @else
+                    <p>Tidak ada file.</p>
                 @endif
             </div>
 
@@ -44,10 +67,24 @@
                 <label for="bukti_proyek">Bukti Proyek (Opsional)</label>
                 <input type="file" name="bukti_proyek[]" id="bukti_proyek" class="form-control" multiple>
                 @if ($proyek->bukti_proyek)
-                    <div class="mt-2">
-                        <strong>Bukti yang sudah ada:</strong>
-                        <a href="{{ Storage::url($proyek->bukti_proyek) }}" target="_blank">Lihat Bukti Proyek</a>
-                    </div>
+                    @foreach (explode(',', $proyek->bukti_proyek) as $file)
+                        @php
+                            $fileExtension = pathinfo($file, PATHINFO_EXTENSION);
+                        @endphp
+                        @if ($fileExtension === 'pdf')
+                            <iframe src="{{ asset($file) }}" width="100%" height="600px"></iframe>
+                        @elseif (in_array($fileExtension, ['jpg', 'jpeg', 'png']))
+                            <img src="{{ asset($file) }}" alt="Bukti Proyek" class="img-fluid">
+                        @elseif (in_array($fileExtension, ['doc', 'docx']))
+                            <iframe src="https://docs.google.com/gview?url={{ urlencode(asset($file)) }}&embedded=true"
+                                width="100%" height="600px">
+                            </iframe>
+                        @else
+                            <p>Tipe file tidak dikenali.</p>
+                        @endif
+                    @endforeach
+                @else
+                    <p>Tidak ada bukti file.</p>
                 @endif
             </div>
 
@@ -60,20 +97,29 @@
             <div class="form-group">
                 <label for="tgl_mulai">Tanggal Mulai</label>
                 <input type="date" name="tgl_mulai" id="tgl_mulai" class="form-control"
-                    value="{{ old('tgl_mulai', $proyek->tgl_mulai) }}">
+                    value="{{ old('tgl_mulai', $proyek->tgl_mulai ? date('Y-m-d', strtotime($proyek->tgl_mulai)) : '') }}">
             </div>
 
             <div class="form-group">
                 <label for="tgl_selesai">Tanggal Selesai</label>
                 <input type="date" name="tgl_selesai" id="tgl_selesai" class="form-control"
-                    value="{{ old('tgl_selesai', $proyek->tgl_selesai) }}">
+                    value="{{ old('tgl_selesai', $proyek->tgl_selesai ? date('Y-m-d', strtotime($proyek->tgl_selesai)) : '') }}">
             </div>
 
             <div class="form-group">
                 <label for="status">Status</label>
                 <select name="status" id="status" class="form-control">
-                    <option value="P" {{ old('status', $proyek->status) == 'P' ? 'selected' : '' }}>Proses</option>
-                    <option value="I" {{ old('status', $proyek->status) == 'I' ? 'selected' : '' }}>Selesai</option>
+                    @if (Auth::check() && Auth::user()->id_role == 1)
+                        <!-- Jika id_role = 1, tampilkan semua pilihan -->
+                        <option value="P" {{ old('status') == 'P' ? 'selected' : '' }}>Publik</option>
+                        <option value="I" {{ old('status') == 'I' ? 'selected' : '' }}>Internal</option>
+                    @elseif(Auth::check() && Auth::user()->id_role == 2)
+                        <!-- Jika id_role = 2, hanya tampilkan 'Internal' -->
+                        <option value="I" {{ old('status') == 'I' ? 'selected' : '' }}>Internal</option>
+                    @else
+                        <!-- Jika tidak ada role, tampilkan pilihan default atau kosong -->
+                        <option value="" disabled selected>Pilih Status</option>
+                    @endif
                 </select>
             </div>
 

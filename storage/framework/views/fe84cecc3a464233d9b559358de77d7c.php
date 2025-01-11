@@ -49,8 +49,8 @@
                             </nav>
                         </div>
                         <div class="actions-area">
-
                             
+                            <!-- Tombol Side Collaps -->
                             <div class="tmp-side-collups-area" id="side-collups">
                                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -247,21 +247,22 @@
                 <div class="split-inner">
                     <h2 class="title sal-animate mb--40" data-sal="slide-up" data-sal-duration="700"
                         data-sal-delay="100">
-                        What is Bizper?</h2>
+                        Apa itu PT. CSI?</h2>
                     <p class="description sal-animate mb--25" data-sal="slide-up" data-sal-duration="700"
-                        data-sal-delay="300">Randomised words which don't look even slightly
-                        believable. If you are to use a passage of Lorem Ipsum. You need to be
-                        sure there isn't anything embarrassing hidden in the middle of text. in
-                        some form, by injectedeed bedhumour, or randomised even.</p>
+                        data-sal-delay="300">PT Catur Samasta Indonusa adalah salah satu perusahaan yang bergerak dalam
+                        bidang layanan jasa konsultasi, terkait dengan kajian-kajian tentang bisnis-manajemen dan lingkungan
+                        hidup. jenis jenis layanan jasa konsultasi yang dimaksud antara lain, feasibility study, perencanaan
+                        wilayah dan tata ruang, berbagai macam survey dan pemetaan, design engineering penilain dan kajian
+                        lingkungan. </p>
                     <p class="description sal-animate" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
-                        You need to be
-                        sure there isn't anything embarrassing hidden in the middle of text. in
-                        some form, by injectedeed bedhumour, or randomised even.</p>
+                        PT. Catur Samasta Indonusa memiliki tenaga tenaga ahli yang berpengalaman dibidangnya masing-masing,
+                        diantaranya:</p>
                     <ul class="split-list sal-animate" data-sal="slide-up" data-sal-duration="700" data-sal-delay="20">
-                        <li>- Doug DeMarco, Design Prototyping Manager</li>
-                        <li>- 108 million paying subscribers</li>
-                        <li>- Over 1.7 billion hours of music played monthly</li>
-                        <li>- 4,000+ employees working across 16 offices</li>
+                        <li>- Bidang konservasi SDAH</li>
+                        <li>- Biodiversity dan Bioekologi</li>
+                        <li>- Jasa Jasa Lingkungan</li>
+                        <li>- Tata Ruang</li>
+                        <li>- Hidrologi rehabilitasi dan bidang sosial ekonomi budaya masyarakat</li>
                     </ul>
                     <div class="view-more-button mt--35 sal-animate d-flex" data-sal="slide-up" data-sal-duration="700"
                         data-sal-delay="300">
@@ -271,7 +272,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="thumbnail image-right-content">
-                    <img src="<?php echo e(asset('assets/images/about/about-large.jpg')); ?>"src="<?php echo e(asset('assets/images/about/about-large.jpg')); ?>"
+                    <img src="<?php echo e(asset('assets/images/logo/wp1.jpg')); ?>"src="<?php echo e(asset('assets/images/logo/wp1.jpg')); ?>"
                         alt="split Images">
                 </div>
             </div>
@@ -662,8 +663,8 @@
                         <div class="section-head section-head-one-side text-align-left">
                             <span class="title">Contact Us</span>
                             <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolor magnaaliqua.
+                                Jika Anda memiliki pertanyaan atau membutuhkan informasi lebih lanjut, jangan ragu untuk
+                                menghubungi kami. Kami siap membantu Anda dengan segala kebutuhan Anda.
                             </p>
                         </div>
 
@@ -675,7 +676,7 @@
                                     </div>
                                     <div class="content">
                                         <span>Call Us</span>
-                                        <a class="contact-here" href="tel:+4733378901">+123 34598768</a>
+                                        <a class="contact-here" href="tel:+4733378901">0251 - 7588409</a>
                                     </div>
                                 </div>
                             </li>
@@ -689,7 +690,8 @@
 
                                     <div class="content">
                                         <span>E-mail</span>
-                                        <a class="contact-here" href="mailto:webmaster@example.com">info@uibundle.com</a>
+                                        <a class="contact-here"
+                                            href="mailto:csi_samasta@yahoo.com">csi_samasta@yahoo.com</a>
                                     </div>
 
                                 </div>
@@ -702,7 +704,8 @@
                                     </div>
                                     <div class="content">
                                         <span>Address</span>
-                                        <a class="contact-here" href="#">25/5 Double Street, Texas Houston USA</a>
+                                        <a class="contact-here" href="#">Green View Residence Blok E No.4, Jl. CIFOR
+                                            Situgede Bogor 16115 - Jawa Barat Indonesia</a>
                                     </div>
                                 </div>
                             </li>
@@ -728,8 +731,9 @@
                         <div class="section-head section-head-one-side text-align-left">
                             <span class="title">GET IN TOUCH</span>
                             <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolor magnaaliqua.
+                                Kami siap membantu Anda! Jika Anda memiliki pertanyaan atau ingin berdiskusi lebih lanjut,
+                                silakan hubungi kami melalui informasi yang tersedia di bawah ini. Kami akan segera
+                                merespons.
                             </p>
                         </div>
                         <div class="contact-form style-two">
@@ -798,22 +802,34 @@
                         <div class="single-footer-wrapper border-right mr--20">
                             <div class="logo">
                                 <a href="<?php echo e(route('onepage-eight')); ?>">
-                                    <img src="<?php echo e(asset('assets/images/logo/logo-02.svg')); ?>"src="<?php echo e(asset('assets/images/logo/logo-02.svg')); ?>"
+                                    <img src="<?php echo e(asset('assets/images/logo/csi_logo2.png')); ?>"src="<?php echo e(asset('assets/images/logo/csi_logo2.png')); ?>"
                                         alt="logo">
                                 </a>
                             </div>
 
                             <p class="description">
-                                Proin Pretium Sem Libero, Nec Aliquet Augue Lobortis In. Phasellus Nibh Quam, Molestie Id
-                                Est Sit Amet, Luctus Pulvinar
+                                PT Catur Samasta Indonusa adalah perusahaan konsultan yang bergerak
+                                di bidang manajemen,
+                                lingkungan, dan sosial. Kami menyediakan berbagai layanan seperti feasibility study, tata
+                                ruang,
+                                survei potensi hutan, social impact assessment, serta kajian sosial ekonomi budaya
+                                masyarakat.
+                                Dengan tim profesional dan berpengalaman, kami berkomitmen memberikan solusi yang inovatif,
+                                terpercaya, dan berbasis data untuk mendukung pengelolaan sumber daya alam yang
+                                berkelanjutan,
+                                bertanggung jawab, serta berdampak positif bagi lingkungan dan masyarakat. Bidang-bidang
+                                yang
+                                kami tangani antara lain Kehutanan, Pertanian, Perkebunan, Pertambangan, Perikanan, dan
+                                bidang
+                                lainnya yang relevan.
                             </p>
 
 
                             <div class="day-time">
                                 <div class="icon"><i class="fa-solid fa-alarm-clock"></i></div>
                                 <div class="content">
-                                    <div class="day">Sunday - Friday:</div>
-                                    <div class="time">9:00 AM – 8:00 PM</div>
+                                    <div class="day">Monday - Friday:</div>
+                                    <div class="time">9:00 AM – 17:00 PM</div>
                                 </div>
                             </div>
 
@@ -825,121 +841,13 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="single-footer-wrapper pl-50 pl_md--0 pl_sm--0">
-                            <h5 class="ft-title">Services</h5>
-                            <ul class="ft-link">
-                                <li>
-                                    <a href="<?php echo e(route('about')); ?>">About Company</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo e(route('team')); ?>">Meet Our Team</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo e(route('service')); ?>">Our Services</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo e(route('blog')); ?>">News & Media</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo e(route('contact')); ?>">Contact Us</a>
-                                </li>
+                    <div class="col-8">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.9293900183523!2d106.74838108144093!3d-6.557294524003736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5d62e19e26f%3A0x624586ceef32cbbc!2sGreen%20View%20Residence!5e0!3m2!1sid!2sid!4v1736434788511!5m2!1sid!2sid"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-                                <li>
-                                    <a href="<?php echo e(route('faq')); ?>">Support</a>
-                                </li>
-
-                            </ul>
-
-                        </div>
                     </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="single-footer-wrapper pl-50 pl_md--0 pl_sm--0">
-                            <h5 class="ft-title">Solutions</h5>
-                            <ul class="ft-link">
-                                <li>
-                                    <a href="#">Brand</a>
-                                </li>
-                                <li>
-                                    <a href="#">Counter</a>
-                                </li>
-                                <li>
-                                    <a href="#">Services</a>
-                                </li>
-                                <li>
-                                    <a href="#">News</a>
-                                </li>
-                                <li>
-                                    <a href="#">Contact Us</a>
-                                </li>
-
-                                <li>
-                                    <a href="<?php echo e(route('faq')); ?>">Support</a>
-                                </li>
-
-                            </ul>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="single-footer-wrapper pl-50 pl_md--0 pl_sm--0">
-                            <h5 class="ft-title">Company</h5>
-                            <ul class="ft-link">
-                                <li>
-                                    <a href="<?php echo e(route('pricing')); ?>">Pricing</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo e(route('team')); ?>">Our Team</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo e(route('service')); ?>">Our Services</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo e(route('blog')); ?>">News & Media</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo e(route('contact')); ?>">Contact Us</a>
-                                </li>
-
-                                <li>
-                                    <a href="<?php echo e(route('faq')); ?>">Support</a>
-                                </li>
-
-                            </ul>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="single-footer-wrapper pl-50 pl_md--0 pl_sm--0">
-                            <h5 class="ft-title">Quick Link</h5>
-                            <ul class="ft-link">
-                                <li>
-                                    <a href="<?php echo e(route('about')); ?>">Company</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo e(route('team')); ?>"> Our Team</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo e(route('service')); ?>">Services</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo e(route('blog')); ?>">News & Media</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo e(route('contact')); ?>">Contact Us</a>
-                                </li>
-
-                                <li>
-                                    <a href="<?php echo e(route('faq')); ?>">Support</a>
-                                </li>
-
-                            </ul>
-
-                        </div>
-                    </div>
-
-
-
                 </div>
             </div>
         </div>
@@ -949,7 +857,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="main-wrapper">
-                        <p>© Copyright 2024. All Rights Reserved by <a href="#">Bizper</a></p>
+                        <p>© Copyright 2025. All Rights Reserved by <a href="#">PT Catur Samasta Indonusa</a></p>
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@
 
         <div class="mb-4">
             <strong>Deskripsi Proyek:</strong>
-            <p><?php echo e($proyek->deskripsi_proyek); ?></p>
+            <p style="text-align: justify;"><?php echo e($proyek->deskripsi_proyek); ?></p>
         </div>
 
         <div class="mb-4">
@@ -88,4 +88,4 @@
     </div>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.layout2', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Gawe\cp-pt-csi\KomproCSI\resources\views/OnePage/proyek/show.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.layoutdashboard', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Gawe\cp-pt-csi\KomproCSI\resources\views/OnePage/proyek/show.blade.php ENDPATH**/ ?>

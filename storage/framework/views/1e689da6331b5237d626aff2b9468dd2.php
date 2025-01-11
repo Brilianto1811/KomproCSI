@@ -1,7 +1,7 @@
 <?php $__env->startSection('content'); ?>
     <div class="container">
-        <h1>List of Users</h1>
-        <a href="<?php echo e(route('user.create')); ?>" class="btn btn-primary">Add User</a>
+        <h1>Daftar Pengguna</h1>
+        <a href="<?php echo e(route('user.create')); ?>" class="btn btn-primary">Tambah Pengguna</a>
         <a href="<?php echo e(route('dashboard')); ?>" class="btn btn-secondary mt-2">Kembali ke Dashboard</a>
         <table class="table mt-4">
             <thead>

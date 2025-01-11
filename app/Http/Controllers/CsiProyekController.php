@@ -6,6 +6,7 @@ use App\Repositories\CsiProyekRepository;
 use App\Repositories\Contracts\CsiProyekRepositoryInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 // use Intervention\Image\Laravel\Facades\Image;
@@ -21,10 +22,24 @@ class CsiProyekController extends Controller
         $this->csiProyekRepository = $csiProyekRepository;
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $proyek = $this->csiProyekRepository->getAll();
+        // $proyek = $this->csiProyekRepository->getAll();
+        $searchTerm = $request->input('search', '');
+        $proyek = $this->csiProyekRepository->getProyekValidasi($searchTerm);
+
         return view('OnePage.proyek.index', compact('proyek'));
+    }
+
+    public function indexPublik(Request $request)
+    {
+        if (Auth::user()->id_role != 1) {
+            return redirect()->route('dashboard')->with('error', 'Anda tidak memiliki akses ke menu ini!');
+        }
+        $searchTerm = $request->input('search', '');
+        $proyek = $this->csiProyekRepository->getProyekPublik($searchTerm);
+
+        return view('OnePage.proyek.indexPublik', compact('proyek'));
     }
 
     public function create()
@@ -200,12 +215,12 @@ class CsiProyekController extends Controller
         return redirect()->route('proyek.index')->with('success', 'Proyek berhasil dihapus!');
     }
 
-    public function showValidasiProyek()
-    {
-        // Mengambil semua proyek dengan status 'I'
-        $proyekValidasi = $this->csiProyekRepository->getProyekValidasi();
+    // public function showValidasiProyek()
+    // {
+    //     // Mengambil semua proyek dengan status 'I'
+    //     $proyekValidasi = $this->csiProyekRepository->getProyekValidasi();
 
-        // Menampilkan proyek yang validasi (status 'I')
-        return view('proyek.validasi', compact('proyekValidasi'));
-    }
+    //     // Menampilkan proyek yang validasi (status 'I')
+    //     return view('proyek.validasi', compact('proyekValidasi'));
+    // }
 }

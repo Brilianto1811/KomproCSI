@@ -46,8 +46,43 @@ class CsiProyekRepository implements CsiProyekRepositoryInterface
         return $proyek->delete();
     }
 
-    public function getProyekValidasi(): \Illuminate\Database\Eloquent\Collection
+    public function getProyekValidasi(string $searchTerm = null)
     {
-        return CsiProyek::where('status_proyek', 'I')->get();  // Ambil semua proyek dengan status 'I'
+        $query = CsiProyek::where('status', 'I');
+
+        if ($searchTerm) {
+            $query->where(function ($query) use ($searchTerm) {
+                $query->where('judul_proyek', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('deskripsi_proyek', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('partner_proyek', 'like', '%' . $searchTerm . '%');
+            });
+        }
+
+        return $query->orderBy('created_at', 'desc')->paginate(10);
+    }
+
+    public function getProyekPublik(string $searchTerm = null)
+    {
+        $query = CsiProyek::where('status', 'P');
+
+        if ($searchTerm) {
+            $query->where(function ($query) use ($searchTerm) {
+                $query->where('judul_proyek', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('deskripsi_proyek', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('partner_proyek', 'like', '%' . $searchTerm . '%');
+            });
+        }
+
+        return $query->orderBy('created_at', 'desc')->paginate(10);
+    }
+
+
+    public function searchProyek(string $searchTerm)
+    {
+        return CsiProyek::where('judul_proyek', 'like', '%' . $searchTerm . '%')
+            ->orWhere('deskripsi_proyek', 'like', '%' . $searchTerm . '%')
+            ->orWhere('partner_proyek', 'like', '%' . $searchTerm . '%')
+            ->orderBy('created_at', 'desc')
+            ->paginate(10);
     }
 }

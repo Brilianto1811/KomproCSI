@@ -9,5 +9,7 @@ interface CsiProyekRepositoryInterface
     public function create(array $data): object;
     public function update(string $uid, array $data): bool;
     public function delete(string $uid): bool;
-    public function getProyekValidasi(): \Illuminate\Database\Eloquent\Collection;
+    public function getProyekValidasi(string $searchTerm = null);
+    public function getProyekPublik(string $searchTerm = null);
+    public function searchProyek(string $searchTerm);
 }

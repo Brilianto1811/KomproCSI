@@ -6,7 +6,7 @@
 
         <div class="mb-4">
             <strong>Deskripsi Proyek:</strong>
-            <p>{{ $proyek->deskripsi_proyek }}</p>
+            <p style="text-align: justify;">{{ $proyek->deskripsi_proyek }}</p>
         </div>
 
         <div class="mb-4">
