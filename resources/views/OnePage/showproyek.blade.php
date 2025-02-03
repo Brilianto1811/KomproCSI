@@ -5,91 +5,57 @@
 @endphp
 
 @section('content')
-    <div class="container">
-        <h1 class="mb-4">Detail Proyek: {{ $proyek->judul_proyek }}</h1>
+    <div class="container p-4 bg-light rounded shadow-sm">
+        <h1 class="mb-4 text-center bg-success text-white p-3 rounded">Detail Proyek: {{ $proyek->judul_proyek }}</h1>
+        <table class="table table-bordered">
+            <tr>
+                <th>Deskripsi Proyek</th>
+                <td style="text-align: justify;">{{ $proyek->deskripsi_proyek }}</td>
+            </tr>
+            <tr>
+                <th>Partner Proyek</th>
+                <td>{{ $proyek->partner_proyek ?? 'Tidak ada' }}</td>
+            </tr>
+            <tr>
+                <th>Tanggal Mulai:</th>
+                <td>{{ \Carbon\Carbon::parse($proyek->tgl_mulai)->translatedFormat('d F Y') }}</td>
+            </tr>
+            <tr>
+                <th>Tanggal Selesai:</th>
+                <td>{{ \Carbon\Carbon::parse($proyek->tgl_selesai)->translatedFormat('d F Y') }}</td>
+            </tr>
+        </table>
 
-        <div class="mb-4">
-            <strong>Deskripsi Proyek:</strong>
-            <p style="text-align: justify;">{{ $proyek->deskripsi_proyek }}</p>
-        </div>
-
-        <div class="mb-4">
-            <strong>Partner Proyek:</strong>
-            <p>{{ $proyek->partner_proyek ?? 'Tidak ada' }}</p>
-        </div>
-
-        <div class="mb-4">
-            <strong>Tanggal Mulai:</strong>
-            <p>{{ \Carbon\Carbon::parse($proyek->tgl_mulai)->format('d-m-Y') }}</p>
-        </div>
-
-        <div class="mb-4">
-            <strong>Tanggal Selesai:</strong>
-            <p>{{ \Carbon\Carbon::parse($proyek->tgl_selesai)->format('d-m-Y') }}</p>
-        </div>
-
-        {{-- <div class="mb-4">
-            <strong>Status:</strong>
-            <p>{{ $proyek->status == 'P' ? 'Publik' : 'Internal' }}</p>
-        </div>
-
-        <div class="mb-4">
-            <strong>File Proyek:</strong>
-            @if ($proyek->file_proyek)
-                @foreach (explode(',', $proyek->file_proyek) as $file)
-                    @php
-                        $fileExtension = pathinfo($file, PATHINFO_EXTENSION);
-                    @endphp
-                    @if ($fileExtension === 'pdf')
-                        <!-- Untuk PDF, kita tampilkan dengan object -->
-                        <object data="{{ url('/' . $file) }}" type="application/pdf" width="100%" height="600px">
-                            <p>PDF tidak dapat ditampilkan. <a href="{{ url('/' . $file) }}" target="_blank">Unduh
-                                    file PDF</a></p>
-                        </object>
-                    @elseif (in_array($fileExtension, ['jpg', 'jpeg', 'png']))
-                        <!-- Untuk gambar, kita tampilkan menggunakan tag img -->
-                        <img src="{{ url('/' . $file) }}" alt="File Proyek" class="img-fluid">
-                    @elseif (in_array($fileExtension, ['doc', 'docx']))
-                        <!-- Untuk dokumen Word, kita tampilkan menggunakan Google Docs Viewer -->
-                        <div>
-                            <a href="https://docs.google.com/gview?url={{ urlencode(url('/' . $file)) }}&embedded=true"
-                                target="_blank">
-                                Lihat dokumen Word
-                            </a>
-                        </div>
-                    @else
-                        <p>Tipe file tidak dikenali.</p>
-                    @endif
-                @endforeach
-            @else
-                <p>Tidak ada file.</p>
-            @endif
-        </div> --}}
-
-        <div class="mb-4">
-            <strong>Dokumentasi Proyek:</strong>
+        <h3 class="mt-4">Dokumentasi Proyek</h3>
+        <hr>
+        <div class="row">
             @if ($proyek->bukti_proyek)
                 @foreach (explode(',', $proyek->bukti_proyek) as $file)
                     @php
                         $fileExtension = pathinfo($file, PATHINFO_EXTENSION);
                     @endphp
-                    @if ($fileExtension === 'pdf')
-                        <iframe src="{{ asset($file) }}" width="100%" height="600px"></iframe>
-                    @elseif (in_array($fileExtension, ['jpg', 'jpeg', 'png']))
-                        <img src="{{ asset($file) }}" alt="Dokumentasi Proyek" class="img-fluid">
-                    @elseif (in_array($fileExtension, ['doc', 'docx']))
-                        <iframe src="https://docs.google.com/gview?url={{ urlencode(asset($file)) }}&embedded=true"
-                            width="100%" height="600px">
-                        </iframe>
-                    @else
-                        <p>Tipe file tidak dikenali.</p>
-                    @endif
+                    <div class="col-md-6 mb-3">
+                        <div class="border p-3 shadow-sm">
+                            @if ($fileExtension === 'pdf')
+                                <iframe src="{{ asset($file) }}" width="100%" height="300px"></iframe>
+                            @elseif (in_array($fileExtension, ['jpg', 'jpeg', 'png']))
+                                <img src="{{ asset($file) }}" alt="Dokumentasi Proyek" class="img-fluid shadow">
+                            @elseif (in_array($fileExtension, ['doc', 'docx']))
+                                <iframe src="https://docs.google.com/gview?url={{ urlencode(asset($file)) }}&embedded=true"
+                                    width="100%" height="300px"></iframe>
+                            @else
+                                <p>Tipe file tidak dikenali.</p>
+                            @endif
+                        </div>
+                    </div>
                 @endforeach
             @else
-                <p>Tidak ada bukti file.</p>
+                <p class="text-center">Tidak ada bukti file.</p>
             @endif
         </div>
 
-        <a href="{{ route('onepage-eight') }}" class="btn btn-secondary">Kembali ke Home</a>
+        <div class="d-flex justify-content-center mt-4 mb-4">
+            <a href="{{ route('onepage-eight') }}" class="btn btn-secondary btn-lg px-5 py-3 fw-bold">Kembali</a>
+        </div>
     </div>
 @endsection

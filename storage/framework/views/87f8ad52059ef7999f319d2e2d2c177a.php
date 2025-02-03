@@ -2,8 +2,8 @@
 
  <div id="side-hide">
      <div class="top-area">
-         <a href="{{ route('onepage-eight') }}" class="logo-area">
-             <img src="{{ asset('assets/images/logo/csi_logo2.png') }}" alt="logo">
+         <a href="<?php echo e(route('onepage-eight')); ?>" class="logo-area">
+             <img src="<?php echo e(asset('assets/images/logo/csi_logo2.png')); ?>" alt="logo">
          </a>
          <div class="close-icon-area">
              <div id="close-slide__main">
@@ -14,7 +14,7 @@
      <div class="body">
 
          <div class="image-area-feature">
-             <img src="{{ asset('assets/images/sidebar/01.jpg') }}" alt="sidebar">
+             <img src="<?php echo e(asset('assets/images/sidebar/01.jpg')); ?>" alt="sidebar">
          </div>
          <h5 class="title mt--30">Transforming your ideas into digital reality</h5>
          <p class="disc">
@@ -51,12 +51,7 @@
              <!-- single contact information end -->
          </div>
          <!-- social area start -->
-         {{-- <ul class="social-icons solid-social-icons rounded-social-icons">
-             <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-             <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-             <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-             <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-         </ul> --}}
+         
          <!-- social area end -->
      </div>
      <!-- mobile menu area start -->
@@ -64,19 +59,19 @@
          <nav class="nav-main mainmenu-nav mt--30">
              <ul class="mainmenu metismenu" id="mobile-menu-active">
                  <li>
-                     <a href="{{ route('onepage-eight') }}#home" class="main">Home</a>
+                     <a href="<?php echo e(route('onepage-eight')); ?>#home" class="main">Home</a>
                  </li>
                  <li>
-                     <a href="{{ route('onepage-eight') }}#service" class="main">Services</a>
+                     <a href="<?php echo e(route('onepage-eight')); ?>#service" class="main">Services</a>
                  </li>
                  <li>
-                     <a href="{{ route('onepage-eight') }}#about" class="main">About</a>
+                     <a href="<?php echo e(route('onepage-eight')); ?>#about" class="main">About</a>
                  </li>
                  <li>
-                     <a href="{{ route('onepage-eight') }}#portfolio" class="main">Portfolio</a>
+                     <a href="<?php echo e(route('onepage-eight')); ?>#portfolio" class="main">Portfolio</a>
                  </li>
                  <li>
-                     <a href="{{ route('onepage-eight') }}#contact" class="main">Contact</a>
+                     <a href="<?php echo e(route('onepage-eight')); ?>#contact" class="main">Contact</a>
                  </li>
              </ul>
          </nav>
@@ -84,3 +79,4 @@
      <!-- mobile menu area end -->
  </div>
  <!-- tpm-header-area end -->
+<?php /**PATH C:\Users\ACER\Documents\PROJEK WEB CSI\KomproCSI\resources\views/components/sidebar.blade.php ENDPATH**/ ?>

@@ -12,17 +12,19 @@
 
         <!-- Kolom Pencarian -->
         <div class="d-flex justify-content-between mb-4">
-            <div>
-                <a href="{{ route('proyek.create') }}" class="btn btn-primary mb-6">Tambah Proyek Baru</a>
+            <div style="margin-bottom: 20px">
+                <a href="{{ route('proyek.create') }}" class="btn btn-primary">Tambah Proyek Baru</a>
             </div>
             <div>
                 <form action="{{ route('proyek.index') }}" method="GET" class="form-inline">
-                    <input type="text" name="search" class="form-control"
-                        placeholder="Cari berdasarkan Judul/Deskripsi/Partner" value="{{ $searchTerm ?? '' }}">
-                    <button type="submit" class="btn btn-secondary ml-2">Cari</button>
+                    <input type="text" name="search" class="input-field"
+                        placeholder="Cari berdasarkan Judul/Deskripsi/Partner" value="{{ $searchTerm ?? '' }}"
+                        style="width: 300px; height: 25px; border-radius: 5px"> <!-- Ukuran kolom diperbesar -->
+                    <button type="submit" class="btn btn-info">Cari</button> <!-- Warna hijau -->
                 </form>
             </div>
         </div>
+
 
         <table class="table">
             <thead>

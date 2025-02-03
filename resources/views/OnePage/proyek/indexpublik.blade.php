@@ -11,9 +11,9 @@
         @endif
         <div>
             <form action="{{ route('proyek.indexPublik') }}" method="GET" class="form-inline">
-                <input type="text" name="search" class="form-control"
-                    placeholder="Cari berdasarkan Judul/Deskripsi/Partner" value="{{ $searchTerm ?? '' }}">
-                <button type="submit" class="btn btn-secondary ml-2">Cari</button>
+                <input type="text" name="search" class="input-field" placeholder="Cari berdasarkan Judul/Deskripsi/Partner"
+                    value="{{ $searchTerm ?? '' }}" style="width: 300px; height: 25px; border-radius: 5px">
+                <button type="submit" class="btn btn-info ml-2">Cari</button>
             </form>
         </div>
 

@@ -1,11 +1,9 @@
-@extends('layouts.layout2')
-
-@php
+<?php
     $bodyClass = 'onepage';
-@endphp
+?>
 
 
-@section('content')
+<?php $__env->startSection('content'); ?>
     <!-- tmp header area  -->
     <header class="header-solid header--sticky">
         <div class="container">
@@ -13,8 +11,8 @@
                 <div class="col-lg-12">
                     <div class="header-solid-main-wrapper">
                         <div class="logo-area-start">
-                            <a class="logo" href="{{ route('onepage-eight') }}">
-                                <img src="{{ asset('assets/images/logo/csi_logo2.png') }}" alt="Corporate_business_logo"
+                            <a class="logo" href="<?php echo e(route('onepage-eight')); ?>">
+                                <img src="<?php echo e(asset('assets/images/logo/csi_logo2.png')); ?>" alt="Corporate_business_logo"
                                     width="75" height="50">
                             </a>
                         </div>
@@ -51,11 +49,7 @@
                             </nav>
                         </div>
                         <div class="actions-area">
-                            {{-- <!-- Tombol Login -->
-                            <a href="{{ route('login') }}" class="tmp-btn btn-primary small-btn"
-                                style="position: absolute; right: 20px;">
-                                Login
-                            </a> --}}
+                            
                             <!-- Tombol Side Collaps -->
                             <div class="tmp-side-collups-area" id="side-collups">
                                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
@@ -72,7 +66,26 @@
         </div>
     </header>
     <!-- tmp header area end -->
-    <x-sidebar />
+    <?php if (isset($component)) { $__componentOriginal2880b66d47486b4bfeaf519598a469d6 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal2880b66d47486b4bfeaf519598a469d6 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.sidebar','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('sidebar'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal2880b66d47486b4bfeaf519598a469d6)): ?>
+<?php $attributes = $__attributesOriginal2880b66d47486b4bfeaf519598a469d6; ?>
+<?php unset($__attributesOriginal2880b66d47486b4bfeaf519598a469d6); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal2880b66d47486b4bfeaf519598a469d6)): ?>
+<?php $component = $__componentOriginal2880b66d47486b4bfeaf519598a469d6; ?>
+<?php unset($__componentOriginal2880b66d47486b4bfeaf519598a469d6); ?>
+<?php endif; ?>
 
     <!-- tmp banner area -->
     <section class="section-banner-area-start tmp-section-gapTop pt_sm--10 pb--40" id="home">
@@ -100,7 +113,7 @@
                 </div>
                 <div class="col-lg-6 order-xl-2 order-md-1 order-sm-1 order-1 mb_md--30 mb_sm--30">
                     <div class="frame-image-about-company">
-                        <img src="{{ asset('assets/images/logo/wp1.jpg') }}"src="{{ asset('assets/images/logo/wp1.jpg') }}"
+                        <img src="<?php echo e(asset('assets/images/logo/wp1.jpg')); ?>"src="<?php echo e(asset('assets/images/logo/wp1.jpg')); ?>"
                             alt="Banner Images">
                     </div>
                 </div>
@@ -116,7 +129,7 @@
                     data-sal-duration="800">
                     <div class="service-inner financial-service-inner agency-service feature-service">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/services/logo_konsultasi.png') }}"src="{{ asset('assets/images/services/logo_konsultasi.png') }}"
+                            <img src="<?php echo e(asset('assets/images/services/logo_konsultasi.png')); ?>"src="<?php echo e(asset('assets/images/services/logo_konsultasi.png')); ?>"
                                 alt="corporate_Business_Services_agency" width="150" height="50">
                         </div>
                         <div class="content">
@@ -138,7 +151,7 @@
                     data-sal-duration="800">
                     <div class="service-inner financial-service-inner agency-service feature-service">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/services/logo_solusi.png') }}"src="{{ asset('assets/images/services/logo_solusi.png') }}"
+                            <img src="<?php echo e(asset('assets/images/services/logo_solusi.png')); ?>"src="<?php echo e(asset('assets/images/services/logo_solusi.png')); ?>"
                                 alt="corporate_Business_Services_agency" width="150" height="50">
 
                         </div>
@@ -160,7 +173,7 @@
                     data-sal-duration="800">
                     <div class="service-inner financial-service-inner agency-service feature-service">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/services/logo_kepuasan2.png') }}"src="{{ asset('assets/images/services/logo_kepuasan.png') }}"
+                            <img src="<?php echo e(asset('assets/images/services/logo_kepuasan2.png')); ?>"src="<?php echo e(asset('assets/images/services/logo_kepuasan.png')); ?>"
                                 alt="corporate_Business_Services_Agency" width="150" height="50">
 
                         </div>
@@ -182,7 +195,7 @@
                     data-sal-duration="800">
                     <div class="service-inner financial-service-inner agency-service feature-service">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/services/logo_esl.jpg') }}"src="{{ asset('assets/images/services/logo_esl.jpg') }}"
+                            <img src="<?php echo e(asset('assets/images/services/logo_esl.jpg')); ?>"src="<?php echo e(asset('assets/images/services/logo_esl.jpg')); ?>"
                                 alt="corporate_Business_Services_agency" width="100" height="50">
 
                         </div>
@@ -253,13 +266,13 @@
                     </ul>
                     <div class="view-more-button mt--35 sal-animate d-flex" data-sal="slide-up" data-sal-duration="700"
                         data-sal-delay="300">
-                        <a class="tmp-btn btn-primary" href="{{ route('contact') }}">Contact With Us</a>
+                        <a class="tmp-btn btn-primary" href="<?php echo e(route('contact')); ?>">Contact With Us</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="thumbnail image-right-content">
-                    <img src="{{ asset('assets/images/logo/wp1.jpg') }}"src="{{ asset('assets/images/logo/wp1.jpg') }}"
+                    <img src="<?php echo e(asset('assets/images/logo/wp1.jpg')); ?>"src="<?php echo e(asset('assets/images/logo/wp1.jpg')); ?>"
                         alt="split Images">
                 </div>
             </div>
@@ -275,7 +288,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 counter__anim">
                     <div class="single-counterup-area-agency">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/counter/05.svg') }}"src="{{ asset('assets/images/counter/05.svg') }}"
+                            <img src="<?php echo e(asset('assets/images/counter/05.svg')); ?>"src="<?php echo e(asset('assets/images/counter/05.svg')); ?>"
                                 alt="agency-service">
                         </div>
                         <div class="information">
@@ -289,7 +302,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 counter__anim">
                     <div class="single-counterup-area-agency">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/counter/08.svg') }}"src="{{ asset('assets/images/counter/08.svg') }}"
+                            <img src="<?php echo e(asset('assets/images/counter/08.svg')); ?>"src="<?php echo e(asset('assets/images/counter/08.svg')); ?>"
                                 alt="agency-service">
                         </div>
                         <div class="information">
@@ -303,7 +316,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 counter__anim">
                     <div class="single-counterup-area-agency">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/counter/06.svg') }}"src="{{ asset('assets/images/counter/06.svg') }}"
+                            <img src="<?php echo e(asset('assets/images/counter/06.svg')); ?>"src="<?php echo e(asset('assets/images/counter/06.svg')); ?>"
                                 alt="agency-service">
                         </div>
                         <div class="information">
@@ -317,7 +330,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 counter__anim">
                     <div class="single-counterup-area-agency">
                         <div class="icon">
-                            <img src="{{ asset('assets/images/counter/07.svg') }}"src="{{ asset('assets/images/counter/07.svg') }}"
+                            <img src="<?php echo e(asset('assets/images/counter/07.svg')); ?>"src="<?php echo e(asset('assets/images/counter/07.svg')); ?>"
                                 alt="agency-service">
                         </div>
                         <div class="information">
@@ -346,87 +359,87 @@
         <div class="swiper-wrapper">
             <!-- Slide 1 -->
             <div class="swiper-slide">
-                <img src="{{ asset('assets/images/logo/logo_antam.png') }}"src="{{ asset('assets/images/logo/logo_antam.png') }}"
+                <img src="<?php echo e(asset('assets/images/logo/logo_antam.png')); ?>"src="<?php echo e(asset('assets/images/logo/logo_antam.png')); ?>"
                     alt="Logo 1">
             </div>
             <!-- Slide 2 -->
             <div class="swiper-slide">
-                <img src="{{ asset('assets/images/logo/logo_ipb.png') }}"src="{{ asset('assets/images/logo/logo_ipb.png') }}"
+                <img src="<?php echo e(asset('assets/images/logo/logo_ipb.png')); ?>"src="<?php echo e(asset('assets/images/logo/logo_ipb.png')); ?>"
                     alt="Logo 2">
             </div>
             <!-- Slide 3 -->
             <div class="swiper-slide">
-                <img src="{{ asset('assets/images/logo/logo_genting.png') }}"src="{{ asset('assets/images/logo/logo_genting.png') }}"
+                <img src="<?php echo e(asset('assets/images/logo/logo_genting.png')); ?>"src="<?php echo e(asset('assets/images/logo/logo_genting.png')); ?>"
                     alt="Logo 3">
             </div>
             <!-- Slide 4 -->
             <div class="swiper-slide">
-                <img src="{{ asset('assets/images/logo/logo_asj.png') }}"src="{{ asset('assets/images/logo/logo_asj.png') }}"
+                <img src="<?php echo e(asset('assets/images/logo/logo_asj.png')); ?>"src="<?php echo e(asset('assets/images/logo/logo_asj.png')); ?>"
                     alt="Logo 4">
             </div>
             <!-- Slide 5 -->
             <div class="swiper-slide">
-                <img src="{{ asset('assets/images/logo/logo_fsl.png') }}"src="{{ asset('assets/images/logo/logo_fsl.png') }}"
+                <img src="<?php echo e(asset('assets/images/logo/logo_fsl.png')); ?>"src="<?php echo e(asset('assets/images/logo/logo_fsl.png')); ?>"
                     alt="Logo 5">
             </div>
             <!-- Slide 6 -->
             <div class="swiper-slide">
-                <img src="{{ asset('assets/images/logo/logo_golden.jpeg') }}"src="{{ asset('assets/images/logo/logo_golden.jpeg') }}"
+                <img src="<?php echo e(asset('assets/images/logo/logo_golden.jpeg')); ?>"src="<?php echo e(asset('assets/images/logo/logo_golden.jpeg')); ?>"
                     alt="Logo 6">
             </div>
             <!-- Slide 7 -->
             <div class="swiper-slide">
-                <img src="{{ asset('assets/images/logo/logo_inhutani.png') }}"src="{{ asset('assets/images/logo/logo_inhutani.png') }}"
+                <img src="<?php echo e(asset('assets/images/logo/logo_inhutani.png')); ?>"src="<?php echo e(asset('assets/images/logo/logo_inhutani.png')); ?>"
                     alt="Logo 7">
             </div>
             <!-- Slide 8 -->
             <div class="swiper-slide">
-                <img src="{{ asset('assets/images/logo/logo_julong.png') }}"src="{{ asset('assets/images/logo/logo_julong.png') }}"
+                <img src="<?php echo e(asset('assets/images/logo/logo_julong.png')); ?>"src="<?php echo e(asset('assets/images/logo/logo_julong.png')); ?>"
                     alt="Logo 8">
             </div>
             <!-- Slide 9 -->
             <div class="swiper-slide">
-                <img src="{{ asset('assets/images/logo/logo_kjg.png') }}"src="{{ asset('assets/images/logo/logo_kjg.png') }}"
+                <img src="<?php echo e(asset('assets/images/logo/logo_kjg.png')); ?>"src="<?php echo e(asset('assets/images/logo/logo_kjg.png')); ?>"
                     alt="Logo 9">
             </div>
             <!-- Slide 10 -->
             <div class="swiper-slide">
-                <img src="{{ asset('assets/images/logo/logo_klhk.png') }}"src="{{ asset('assets/images/logo/logo_klhk.png') }}"
+                <img src="<?php echo e(asset('assets/images/logo/logo_klhk.png')); ?>"src="<?php echo e(asset('assets/images/logo/logo_klhk.png')); ?>"
                     alt="Logo 10">
             </div>
             <!-- Slide 11 -->
             <div class="swiper-slide">
-                <img src="{{ asset('assets/images/logo/logo_ksk.png') }}"src="{{ asset('assets/images/logo/logo_ksk.png') }}"
+                <img src="<?php echo e(asset('assets/images/logo/logo_ksk.png')); ?>"src="<?php echo e(asset('assets/images/logo/logo_ksk.png')); ?>"
                     alt="Logo 11">
             </div>
             <!-- Slide 12 -->
             <div class="swiper-slide">
-                <img src="{{ asset('assets/images/logo/logo_mcai.png') }}"src="{{ asset('assets/images/logo/logo_mcai.png') }}"
+                <img src="<?php echo e(asset('assets/images/logo/logo_mcai.png')); ?>"src="<?php echo e(asset('assets/images/logo/logo_mcai.png')); ?>"
                     alt="Logo 12">
             </div>
             <!-- Slide 13 -->
             <div class="swiper-slide">
-                <img src="{{ asset('assets/images/logo/logo_msl.jpeg') }}"src="{{ asset('assets/images/logo/logo_msl.jpeg') }}"
+                <img src="<?php echo e(asset('assets/images/logo/logo_msl.jpeg')); ?>"src="<?php echo e(asset('assets/images/logo/logo_msl.jpeg')); ?>"
                     alt="Logo 13">
             </div>
             <!-- Slide 14 -->
             <div class="swiper-slide">
-                <img src="{{ asset('assets/images/logo/logo_pertamina.png') }}"src="{{ asset('assets/images/logo/logo_pertamina.png') }}"
+                <img src="<?php echo e(asset('assets/images/logo/logo_pertamina.png')); ?>"src="<?php echo e(asset('assets/images/logo/logo_pertamina.png')); ?>"
                     alt="Logo 14">
             </div>
             <!-- Slide 15 -->
             <div class="swiper-slide">
-                <img src="{{ asset('assets/images/logo/logo_pupuk.png') }}"src="{{ asset('assets/images/logo/logo_pupuk.png') }}"
+                <img src="<?php echo e(asset('assets/images/logo/logo_pupuk.png')); ?>"src="<?php echo e(asset('assets/images/logo/logo_pupuk.png')); ?>"
                     alt="Logo 15">
             </div>
             <!-- Slide 16 -->
             <div class="swiper-slide">
-                <img src="{{ asset('assets/images/logo/logo_RNI.png') }}"src="{{ asset('assets/images/logo/logo_RNI.png') }}"
+                <img src="<?php echo e(asset('assets/images/logo/logo_RNI.png')); ?>"src="<?php echo e(asset('assets/images/logo/logo_RNI.png')); ?>"
                     alt="Logo 16">
             </div>
             <!-- Slide 16 -->
             <div class="swiper-slide">
-                <img src="{{ asset('assets/images/logo/logo_sel.png') }}"src="{{ asset('assets/images/logo/logo_sel.png') }}"
+                <img src="<?php echo e(asset('assets/images/logo/logo_sel.png')); ?>"src="<?php echo e(asset('assets/images/logo/logo_sel.png')); ?>"
                     alt="Logo 16">
             </div>
             <!-- Add more slides as needed -->
@@ -457,25 +470,25 @@
                         <div class="product-swiper-area-one">
                             <div class="swiper mySwiper-portfolio-1">
                                 <div class="swiper-wrapper">
-                                    @foreach ($proyek as $item)
+                                    <?php $__currentLoopData = $proyek; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <div class="swiper-slide">
                                             <div class="signle-product-start"
                                                 data-tmp-cursor="lg text-secondary transparent fw-bold">
                                                 <a class="thumbnail"
-                                                    href="{{ route('proyek.showindexpublik', $item->uid_proyek) }}">
-                                                    <img src="{{ asset($item->bukti_proyek) }}"
-                                                        alt="{{ $item->judul_proyek }}">
+                                                    href="<?php echo e(route('proyek.showindexpublik', $item->uid_proyek)); ?>">
+                                                    <img src="<?php echo e(asset($item->bukti_proyek)); ?>"
+                                                        alt="<?php echo e($item->judul_proyek); ?>">
                                                 </a>
                                                 <div class="inner-content">
-                                                    <a href="{{ route('proyek.showindexpublik', $item->uid_proyek) }}">
-                                                        <h5 class="title">{{ $item->judul_proyek }}</h5>
+                                                    <a href="<?php echo e(route('proyek.showindexpublik', $item->uid_proyek)); ?>">
+                                                        <h5 class="title"><?php echo e($item->judul_proyek); ?></h5>
                                                     </a>
-                                                    <span class="designation">{{ $item->partner_proyek }}</span>
+                                                    <span class="designation"><?php echo e($item->partner_proyek); ?></span>
                                                 </div>
                                             </div>
                                             <!-- single product area end -->
                                         </div>
-                                    @endforeach
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </div>
                             </div>
                         </div>
@@ -617,8 +630,8 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single-footer-wrapper border-right mr--20">
                             <div class="logo">
-                                <a href="{{ route('onepage-eight') }}">
-                                    <img src="{{ asset('assets/images/logo/csi_logo2.png') }}"src="{{ asset('assets/images/logo/csi_logo2.png') }}"
+                                <a href="<?php echo e(route('onepage-eight')); ?>">
+                                    <img src="<?php echo e(asset('assets/images/logo/csi_logo2.png')); ?>"src="<?php echo e(asset('assets/images/logo/csi_logo2.png')); ?>"
                                         alt="logo">
                                 </a>
                             </div>
@@ -673,5 +686,26 @@
     </div>
     <!-- End Footer Area  -->
 
-    <x-loader />
-@endsection
+    <?php if (isset($component)) { $__componentOriginald5d051f243b37508d39f8ce3d92a5684 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginald5d051f243b37508d39f8ce3d92a5684 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.loader','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('loader'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginald5d051f243b37508d39f8ce3d92a5684)): ?>
+<?php $attributes = $__attributesOriginald5d051f243b37508d39f8ce3d92a5684; ?>
+<?php unset($__attributesOriginald5d051f243b37508d39f8ce3d92a5684); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginald5d051f243b37508d39f8ce3d92a5684)): ?>
+<?php $component = $__componentOriginald5d051f243b37508d39f8ce3d92a5684; ?>
+<?php unset($__componentOriginald5d051f243b37508d39f8ce3d92a5684); ?>
+<?php endif; ?>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.layout2', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\ACER\Documents\PROJEK WEB CSI\KomproCSI\resources\views/OnePage/onepage_eight.blade.php ENDPATH**/ ?>

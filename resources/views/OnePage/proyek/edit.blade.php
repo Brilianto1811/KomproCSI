@@ -108,7 +108,7 @@
 
             <div class="form-group">
                 <label for="status">Status</label>
-                <select name="status" id="status" class="form-control">
+                <select name="status" id="status" class="form-control form-control-lg">
                     @if (Auth::check() && Auth::user()->id_role == 1)
                         <!-- Jika id_role = 1, tampilkan semua pilihan -->
                         <option value="P" {{ old('status') == 'P' ? 'selected' : '' }}>Publik</option>
