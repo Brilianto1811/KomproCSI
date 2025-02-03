@@ -144,7 +144,6 @@
                                 <div class="dot dot-two"></div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12" data-sal-delay="250" data-sal="slide-up"
@@ -523,7 +522,31 @@
                                     </div>
                                     <div class="content">
                                         <span>Call Us</span>
-                                        <a class="contact-here" href="tel:+4733378901">0251 - 7588409</a>
+                                        <a class="contact-here" href="tel:02517588409">0251 - 7588409</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-contact background-transparent">
+                                    <div class="icon">
+                                        <i class="fa-light fa-phone"></i>
+                                    </div>
+                                    <div class="content">
+                                        <span>Sad Hasto Agus Suprapto</span>
+                                        <a class="contact-here"
+                                            href="https://api.whatsapp.com/send?phone=628129602523">+628129602523</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-contact background-transparent">
+                                    <div class="icon">
+                                        <i class="fa-light fa-phone"></i>
+                                    </div>
+                                    <div class="content">
+                                        <span>Rini Lestari</span>
+                                        <a class="contact-here"
+                                            href="https://api.whatsapp.com/send?phone=6281310437021">+6281310437021</a>
                                     </div>
                                 </div>
                             </li>
