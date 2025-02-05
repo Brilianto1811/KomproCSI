@@ -1,4 +1,16 @@
 <?php $__env->startSection('content'); ?>
+    <style>
+        .btn-group {
+            display: flex;
+            gap: 5px;
+            /* Menambahkan jarak antar tombol */
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            /* Pastikan table bisa di-scroll horizontal di layar kecil */
+        }
+    </style>
     <div class="container">
         <h1 class="mb-4">Daftar Proyek</h1>
 
@@ -24,7 +36,7 @@
         </div>
 
 
-        <table class="table">
+        <table class="table table-responsive">
             <thead>
                 <tr>
                     <th>Judul Proyek</th>
@@ -46,20 +58,22 @@
                         <td><?php echo e($item->status == 'P' ? 'Publik' : 'Internal'); ?></td>
                         <td><?php echo e($item->partner_proyek); ?></td>
                         <td>
-                            <a href="<?php echo e(route('proyek.show', $item->uid_proyek)); ?>" class="btn btn-info">Lihat</a>
-                            <a href="<?php echo e(route('proyek.edit', $item->uid_proyek)); ?>" class="btn btn-warning">Edit</a>
-                            <form action="<?php echo e(route('proyek.destroy', $item->uid_proyek)); ?>" method="POST"
-                                style="display: inline-block;">
-                                <?php echo csrf_field(); ?>
-                                <?php echo method_field('DELETE'); ?>
-                                <button type="submit" class="btn btn-danger"
-                                    onclick="return confirm('Apakah Anda yakin ingin menghapus proyek ini?')">Hapus</button>
-                            </form>
+                            <div class="btn-group">
+                                <a href="<?php echo e(route('proyek.show', $item->uid_proyek)); ?>" class="btn btn-info">Lihat</a>
+                                <a href="<?php echo e(route('proyek.edit', $item->uid_proyek)); ?>" class="btn btn-warning">Edit</a>
+                                <form action="<?php echo e(route('proyek.destroy', $item->uid_proyek)); ?>" method="POST"
+                                    style="display: inline-block;">
+                                    <?php echo csrf_field(); ?>
+                                    <?php echo method_field('DELETE'); ?>
+                                    <button type="submit" class="btn btn-danger"
+                                        onclick="return confirm('Apakah Anda yakin ingin menghapus proyek ini?')">Hapus</button>
+                                </form>
+                            </div>
                         </td>
                     </tr>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
                     <tr>
-                        <td colspan="6" class="text-center">Data Proyek Kosong</td>
+                        <td colspan="7" class="text-center">Data Proyek Kosong</td>
                     </tr>
                 <?php endif; ?>
             </tbody>
