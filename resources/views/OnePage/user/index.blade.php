@@ -1,17 +1,16 @@
 @extends('layouts.layoutdashboard')
 
 @section('content')
-    <div class="container">
-        <h1>Daftar Pengguna</h1>
+    <div class="container p-4 bg-light shadow-lg rounded-lg">
+        <h2 class="mb-4 text-center bg-success text-white p-3 rounded">Daftar Pengguna</h2>
         <a href="{{ route('user.create') }}" class="btn btn-primary">Tambah Pengguna</a>
-        <a href="{{ route('dashboard') }}" class="btn btn-secondary mt-2">Kembali ke Dashboard</a>
         <table class="table mt-4">
             <thead>
                 <tr>
                     <th>No</th>
                     <th>Username</th>
                     <th>Email</th>
-                    <th>Actions</th>
+                    <th class="text-center">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,8 +21,10 @@
                         <td>{{ $user->email_user }}</td>
                         <td>
                             <!-- Update Password -->
-                            <a href="{{ route('user.editPassword', $user->id_user) }}" class="btn btn-warning">Update
-                                Password</a>
+                            <a href="{{ route('user.editPassword', $user->id_user) }}"><button class="btn btn-warning">
+                                    Update Password
+                                </button>
+                            </a>
 
                             <!-- Delete -->
                             <button class="btn btn-danger"
@@ -50,3 +51,6 @@
         }
     </script>
 @endsection
+
+<x-scripts />
+<x-head />

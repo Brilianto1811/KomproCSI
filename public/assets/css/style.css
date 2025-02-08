@@ -633,34 +633,34 @@ ol ul {
 }
 
 .tmp-section-gapBottom {
-    padding-bottom: 120px;
+    padding-bottom: 50px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .tmp-section-gapBottom {
-        padding-bottom: 80px;
+        padding-bottom: 50px;
     }
 }
 
 @media only screen and (max-width: 767px) {
     .tmp-section-gapBottom {
-        padding-bottom: 80px;
+        padding-bottom: 50px;
     }
 }
 
 .tmp-section-gapTop {
-    padding-top: 120px;
+    padding-top: 50px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .tmp-section-gapTop {
-        padding-top: 80px;
+        padding-top: 50px;
     }
 }
 
 @media only screen and (max-width: 767px) {
     .tmp-section-gapTop {
-        padding-top: 80px;
+        padding-top: 50px;
     }
 }
 
@@ -15646,7 +15646,12 @@ nav ul li.has-dropdown .submenu li::after {
 
 .section-head {
     text-align: center;
-    padding-bottom: 60px;
+    padding-top: 80px;
+}
+
+.section-head1 {
+    text-align: center;
+    padding-top: 80px;
 }
 
 .section-head.pb-40 {
@@ -15741,7 +15746,7 @@ nav ul li.has-dropdown .submenu li::after {
 
 .section-head.color-white {
     text-align: center;
-    padding-bottom: 60px;
+    margin-bottom: 50px;
 }
 
 .section-head.color-white .section-sub-title {
@@ -15749,6 +15754,7 @@ nav ul li.has-dropdown .submenu li::after {
     font-weight: var(--s-bold);
     color: var(--color-success);
     text-transform: uppercase;
+    margin-top: -80px;
 }
 
 .section-head.color-white .section-sub-title span.subtitle {
@@ -17689,9 +17695,10 @@ body.service-details {
 }
 
 .bg-product-1 {
-    background-image: url(../images/product/bg/01.jpg);
+    background-color: #1d1f1d;
     background-repeat: no-repeat;
     background-position: top center;
+    margin-top: 50px;
 }
 
 .container-full {
@@ -20881,6 +20888,12 @@ body.service-details {
     gap: 15px;
     padding: 25px 20px;
     height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.single-counterup-area-agency:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .single-counterup-area-agency .icon {
@@ -21268,6 +21281,7 @@ body.service-details {
 
 .contact-inner .section-head {
     padding-bottom: 0;
+    padding-top: -50px;
 }
 
 .contact-inner .ft-link.ft-link-style-three li {
@@ -24081,12 +24095,13 @@ body.loaded {
 }
 
 .footer-main.footer-style-one .single-footer-wrapper .description {
-    color: var(--color-white);
+    color: black;
     font-size: 16px;
     font-weight: var(--p-regular);
     line-height: 28px;
     margin-bottom: 23px;
-    max-width: 340px;
+    max-width: 100%;
+    /* Menyesuaikan dengan layar */
 }
 
 .footer-main.footer-style-one .single-footer-wrapper .day-time {
@@ -24102,6 +24117,38 @@ body.loaded {
 
 .footer-main.footer-style-one .single-footer-wrapper .day-time .icon i {
     font-size: 44px;
+}
+
+/* MEDIA QUERY UNTUK MOBILE */
+@media (max-width: 768px) {
+    .footer-main .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-main.footer-style-one .single-footer-wrapper {
+        border-right: none;
+        margin: 0 auto;
+    }
+
+    .footer-main.footer-style-one .day-time {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-main.footer-style-one .day-time .icon {
+        margin-bottom: 10px;
+    }
+
+    .footer-main .social-icons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-map {
+        width: 100%;
+        height: 250px;
+    }
 }
 
 .single-footer-wrapper .ft-title {
@@ -24284,8 +24331,7 @@ body.loaded {
 }
 
 .bg-color-footer {
-    background-color: #03041C;
-    background-image: url(../images/footer/bg-01.png);
+    background-color: #f7f7f7;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -24350,7 +24396,7 @@ body.loaded {
     background-image: none !important;
 }
 
-.swiper-container {
+/* .swiper-container {
     width: 100%;
     padding: 10px 0;
 }
@@ -24363,8 +24409,41 @@ body.loaded {
 
 .swiper-slide img {
     max-width: 100px;
-    /* Sesuaikan ukuran logo */
     margin: 0 10px;
+} */
+
+.swiper-container {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.swiper-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    max-width: 100px;
+    width: 10vw;
+    /* Menggunakan vw agar lebih fleksibel */
+    height: auto;
+    margin: 0 10px;
+}
+
+/* Responsif untuk tampilan mobile */
+@media screen and (max-width: 768px) {
+    .swiper-slide img {
+        max-width: 80px;
+        /* Ukuran lebih kecil untuk mobile */
+        width: 15vw;
+    }
 }
 
 .tmp-btn.btn-primary.small-btn {

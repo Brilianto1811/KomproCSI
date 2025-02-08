@@ -11,9 +11,9 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Models\CsiProyek;
 use App\Repositories\CsiProyekRepository;
 
-Route::get('/', function () {
-    return redirect()->route('onepage-eight');
-});
+// Route::get('/dwda', function () {
+//     return redirect()->route('onepage-eight');
+// });
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
@@ -70,9 +70,9 @@ Route::prefix('pages/')->group(function () {
 });
 
 // OnePage
-Route::prefix('CSI/')->group(function () {
+Route::prefix('/')->group(function () {
     Route::controller(OnePageController::class)->group(function () {
-        Route::get('Home', 'onePage_eight')->name('onepage-eight');
+        Route::get('/', 'onePage_eight')->name('onepage-eight');
         Route::get('/CSI-Proyek/{uid_proyek}', 'showIndexPublik')->name('proyek.showindexpublik');
         Route::get('onepage-one', 'onePage_one')->name('onepage-one');
         Route::get('onepage-two', 'onePage_two')->name('onepage-two');

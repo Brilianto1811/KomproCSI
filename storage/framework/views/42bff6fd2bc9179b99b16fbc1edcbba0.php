@@ -3,7 +3,6 @@
         .btn-group {
             display: flex;
             gap: 5px;
-            /* Menambahkan jarak antar tombol */
         }
 
         .table-responsive {
@@ -11,9 +10,8 @@
             /* Pastikan table bisa di-scroll horizontal di layar kecil */
         }
     </style>
-    <div class="container">
-        <h1 class="mb-4">Daftar Proyek</h1>
-
+    <div class="container p-4 bg-gray-800 shadow-lg rounded-lg">
+        <h2 class="mb-4 text-center bg-success text-white p-3 rounded">Daftar Proyek</h2>
         <?php if(session('success')): ?>
             <div class="alert alert-success"><?php echo e(session('success')); ?></div>
         <?php elseif(session('error')): ?>
@@ -22,14 +20,15 @@
 
         <!-- Kolom Pencarian -->
         <div class="d-flex justify-content-between mb-4">
-            <div style="margin-bottom: 20px">
+            <div>
                 <a href="<?php echo e(route('proyek.create')); ?>" class="btn btn-primary">Tambah Proyek Baru</a>
             </div>
             <div>
                 <form action="<?php echo e(route('proyek.index')); ?>" method="GET" class="form-inline">
                     <input type="text" name="search" class="input-field"
                         placeholder="Cari berdasarkan Judul/Deskripsi/Partner" value="<?php echo e($searchTerm ?? ''); ?>"
-                        style="width: 300px; height: 25px; border-radius: 5px"> <!-- Ukuran kolom diperbesar -->
+                        style="width: 380px; height: 38px; border-radius: 5px; border:1px solid">
+                    <!-- Ukuran kolom diperbesar -->
                     <button type="submit" class="btn btn-info">Cari</button> <!-- Warna hijau -->
                 </form>
             </div>
@@ -39,13 +38,13 @@
         <table class="table table-responsive">
             <thead>
                 <tr>
-                    <th>Judul Proyek</th>
-                    <th>Deskripsi Proyek</th>
-                    <th>Tanggal Mulai</th>
-                    <th>Tanggal Selesai</th>
-                    <th>Status</th>
-                    <th>Partner</th>
-                    <th>Aksi</th>
+                    <th class="text-center">Judul Proyek</th>
+                    <th class="text-center">Deskripsi Proyek</th>
+                    <th class="text-center">Tanggal Mulai</th>
+                    <th class="text-center">Tanggal Selesai</th>
+                    <th class="text-center">Status</th>
+                    <th class="text-center">Partner</th>
+                    <th class="text-center">Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -84,5 +83,46 @@
 
     </div>
 <?php $__env->stopSection(); ?>
+
+<?php if (isset($component)) { $__componentOriginal23a21c0d0f80992980c57ef2802ca540 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal23a21c0d0f80992980c57ef2802ca540 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.scripts','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('scripts'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal23a21c0d0f80992980c57ef2802ca540)): ?>
+<?php $attributes = $__attributesOriginal23a21c0d0f80992980c57ef2802ca540; ?>
+<?php unset($__attributesOriginal23a21c0d0f80992980c57ef2802ca540); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal23a21c0d0f80992980c57ef2802ca540)): ?>
+<?php $component = $__componentOriginal23a21c0d0f80992980c57ef2802ca540; ?>
+<?php unset($__componentOriginal23a21c0d0f80992980c57ef2802ca540); ?>
+<?php endif; ?>
+<?php if (isset($component)) { $__componentOriginal0f509fab02c45445826003a1e50db506 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal0f509fab02c45445826003a1e50db506 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.head','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('head'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal0f509fab02c45445826003a1e50db506)): ?>
+<?php $attributes = $__attributesOriginal0f509fab02c45445826003a1e50db506; ?>
+<?php unset($__attributesOriginal0f509fab02c45445826003a1e50db506); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal0f509fab02c45445826003a1e50db506)): ?>
+<?php $component = $__componentOriginal0f509fab02c45445826003a1e50db506; ?>
+<?php unset($__componentOriginal0f509fab02c45445826003a1e50db506); ?>
+<?php endif; ?>
 
 <?php echo $__env->make('layouts.layoutdashboard', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\ACER\Documents\PROJEK WEB CSI\KomproCSI\resources\views/OnePage/proyek/index.blade.php ENDPATH**/ ?>

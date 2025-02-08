@@ -201,9 +201,12 @@
         </a>
         <?php if(auth()->user()->id_role == 1): ?>
             <a href="<?php echo e(route('user.index')); ?>" class="<?php echo e(Request::is('user*') ? 'active' : ''); ?>">Kelola Staff</a>
-            <?php endif; ?>
-            <a href="<?php echo e(route('proyek.index')); ?>" class="<?php echo e(Request::is('proyek*') ? 'active' : ''); ?>">Kelola Proyek (Internal)</a>
-            <a href="<?php echo e(route('proyek.indexPublik')); ?>" class="<?php echo e(Request::is('user*') ? 'active' : ''); ?>">Proyek: Publik</a>
+        <?php endif; ?>
+        <a href="<?php echo e(route('proyek.index')); ?>" class="<?php echo e(Request::is('proyek*') ? 'active' : ''); ?>">Kelola Proyek
+            (Internal)</a>
+        <a href="<?php echo e(route('proyek.indexPublik')); ?>" class="<?php echo e(Request::is('user*') ? 'active' : ''); ?>">Proyek:
+            Publik</a>
+        <a href="<?php echo e(route('onepage-eight')); ?>" class="<?php echo e(Request::is('user*') ? 'active' : ''); ?>">Halaman Utama</a>
     </div>
 
     <div class="logout-container">

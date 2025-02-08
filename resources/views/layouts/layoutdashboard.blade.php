@@ -201,9 +201,12 @@
         </a>
         @if (auth()->user()->id_role == 1)
             <a href="{{ route('user.index') }}" class="{{ Request::is('user*') ? 'active' : '' }}">Kelola Staff</a>
-            @endif
-            <a href="{{ route('proyek.index') }}" class="{{ Request::is('proyek*') ? 'active' : '' }}">Kelola Proyek (Internal)</a>
-            <a href="{{ route('proyek.indexPublik') }}" class="{{ Request::is('user*') ? 'active' : '' }}">Proyek: Publik</a>
+        @endif
+        <a href="{{ route('proyek.index') }}" class="{{ Request::is('proyek*') ? 'active' : '' }}">Kelola Proyek
+            (Internal)</a>
+        <a href="{{ route('proyek.indexPublik') }}" class="{{ Request::is('user*') ? 'active' : '' }}">Proyek:
+            Publik</a>
+        <a href="{{ route('onepage-eight') }}" class="{{ Request::is('user*') ? 'active' : '' }}">Halaman Utama</a>
     </div>
 
     <div class="logout-container">

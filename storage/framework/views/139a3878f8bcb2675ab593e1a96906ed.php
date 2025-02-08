@@ -1,15 +1,14 @@
 <?php $__env->startSection('content'); ?>
-    <div class="container">
-        <h1>Daftar Pengguna</h1>
+    <div class="container p-4 bg-light shadow-lg rounded-lg">
+        <h2 class="mb-4 text-center bg-success text-white p-3 rounded">Daftar Pengguna</h2>
         <a href="<?php echo e(route('user.create')); ?>" class="btn btn-primary">Tambah Pengguna</a>
-        <a href="<?php echo e(route('dashboard')); ?>" class="btn btn-secondary mt-2">Kembali ke Dashboard</a>
         <table class="table mt-4">
             <thead>
                 <tr>
                     <th>No</th>
                     <th>Username</th>
                     <th>Email</th>
-                    <th>Actions</th>
+                    <th class="text-center">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,8 +19,10 @@
                         <td><?php echo e($user->email_user); ?></td>
                         <td>
                             <!-- Update Password -->
-                            <a href="<?php echo e(route('user.editPassword', $user->id_user)); ?>" class="btn btn-warning">Update
-                                Password</a>
+                            <a href="<?php echo e(route('user.editPassword', $user->id_user)); ?>"><button class="btn btn-warning">
+                                    Update Password
+                                </button>
+                            </a>
 
                             <!-- Delete -->
                             <button class="btn btn-danger"
@@ -48,5 +49,46 @@
         }
     </script>
 <?php $__env->stopSection(); ?>
+
+<?php if (isset($component)) { $__componentOriginal23a21c0d0f80992980c57ef2802ca540 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal23a21c0d0f80992980c57ef2802ca540 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.scripts','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('scripts'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal23a21c0d0f80992980c57ef2802ca540)): ?>
+<?php $attributes = $__attributesOriginal23a21c0d0f80992980c57ef2802ca540; ?>
+<?php unset($__attributesOriginal23a21c0d0f80992980c57ef2802ca540); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal23a21c0d0f80992980c57ef2802ca540)): ?>
+<?php $component = $__componentOriginal23a21c0d0f80992980c57ef2802ca540; ?>
+<?php unset($__componentOriginal23a21c0d0f80992980c57ef2802ca540); ?>
+<?php endif; ?>
+<?php if (isset($component)) { $__componentOriginal0f509fab02c45445826003a1e50db506 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginal0f509fab02c45445826003a1e50db506 = $attributes; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.head','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
+<?php $component->withName('head'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
+<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__attributesOriginal0f509fab02c45445826003a1e50db506)): ?>
+<?php $attributes = $__attributesOriginal0f509fab02c45445826003a1e50db506; ?>
+<?php unset($__attributesOriginal0f509fab02c45445826003a1e50db506); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal0f509fab02c45445826003a1e50db506)): ?>
+<?php $component = $__componentOriginal0f509fab02c45445826003a1e50db506; ?>
+<?php unset($__componentOriginal0f509fab02c45445826003a1e50db506); ?>
+<?php endif; ?>
 
 <?php echo $__env->make('layouts.layoutdashboard', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\ACER\Documents\PROJEK WEB CSI\KomproCSI\resources\views/OnePage/user/index.blade.php ENDPATH**/ ?>

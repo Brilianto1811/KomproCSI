@@ -1,6 +1,6 @@
 <?php $__env->startSection('content'); ?>
-    <div class="container">
-        <h1 class="mb-4">Edit Proyek: <?php echo e($proyek->judul_proyek); ?></h1>
+    <div class="container p-4 bg-light shadow-lg rounded-lg">
+        <h2 class="mb-4 text-center bg-success text-white p-3 rounded">Edit Proyek: <?php echo e($proyek->judul_proyek); ?></h2>
 
         <?php if($errors->any()): ?>
             <div class="alert alert-danger">

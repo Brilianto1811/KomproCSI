@@ -1,8 +1,8 @@
 @extends('layouts.layoutdashboard')
 
 @section('content')
-    <div class="container">
-        <h1 class="mb-4">Tambah Proyek Baru</h1>
+    <div class="container p-4 bg-light shadow-lg rounded-lg">
+        <h2 class="mb-4 text-center bg-success text-white p-3 rounded">Tambah Proyek Baru</h2>
 
         @if ($errors->any())
             <div class="alert alert-danger">

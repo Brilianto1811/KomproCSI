@@ -1,19 +1,33 @@
-@extends('layouts.layout2')
+@extends('layouts.layoutdashboard')
 
 @section('content')
-<div class="container">
-    <h1>Update Password for {{ $user->username_user }}</h1>
-    <form action="{{ route('user.updatePassword', $user->id_user) }}" method="POST">
-        @csrf
-        <div class="mb-3">
-            <label for="password" class="form-label">New Password</label>
-            <input type="password" name="password" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label for="password_confirmation" class="form-label">Confirm New Password</label>
-            <input type="password" name="password_confirmation" class="form-control" required>
-        </div>
-        <button type="submit" class="btn btn-success">Update Password</button>
-    </form>
-</div>
+    <div class="container p-4 bg-light rounded shadow-sm">
+        <h2 class="mb-4 text-center bg-success text-white p-3 rounded">Update Password Untuk {{ $user->username_user }} </h2>
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+        <form action="{{ route('user.updatePassword', $user->id_user) }}" method="POST">
+            @csrf
+            <div class="form-group">
+                <label for="new_password">New Password</label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm_new_password">Confirm New Password</label>
+                <input type="password" name="password_confirmation" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Simpan</button>
+        </form>
+    </div>
 @endsection
+
+<x-scripts />
+<x-head />

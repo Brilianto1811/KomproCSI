@@ -130,7 +130,7 @@
                     <div class="service-inner financial-service-inner agency-service feature-service">
                         <div class="icon">
                             <img src="<?php echo e(asset('assets/images/services/logo_konsultasi.png')); ?>"src="<?php echo e(asset('assets/images/services/logo_konsultasi.png')); ?>"
-                                alt="corporate_Business_Services_agency" width="150" height="50">
+                                alt="corporate_Business_Services_agency" width="100" height="80">
                         </div>
                         <div class="content">
                             <h2 class="title">Konsultasi Multidisiplin Profesional dan Kredibel</h2>
@@ -241,41 +241,59 @@
 
     <!-- about company wrapper -->
     <section class="about-company-area tmp-section-gapBottom" id="about">
-        <div class="row align-items-center  plr_sm--15 plr_md--15">
-            <div class="col-lg-4 offset-lg-2 mb_md--50 mb_sm--30">
-                <div class="split-inner">
-                    <h2 class="title sal-animate mb--40" data-sal="slide-up" data-sal-duration="700"
-                        data-sal-delay="100">
-                        Apa itu PT. CSI?</h2>
-                    <p class="description sal-animate mb--25" data-sal="slide-up" data-sal-duration="700"
-                        data-sal-delay="300">PT Catur Samasta Indonusa adalah salah satu perusahaan yang bergerak dalam
-                        bidang layanan jasa konsultasi, terkait dengan kajian-kajian tentang bisnis-manajemen dan lingkungan
-                        hidup. jenis jenis layanan jasa konsultasi yang dimaksud antara lain, feasibility study, perencanaan
-                        wilayah dan tata ruang, berbagai macam survey dan pemetaan, design engineering penilain dan kajian
-                        lingkungan. </p>
-                    <p class="description sal-animate" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
-                        PT. Catur Samasta Indonusa memiliki tenaga tenaga ahli yang berpengalaman dibidangnya masing-masing,
-                        diantaranya:</p>
-                    <ul class="split-list sal-animate" data-sal="slide-up" data-sal-duration="700" data-sal-delay="20">
-                        <li>- Bidang konservasi SDAH</li>
-                        <li>- Biodiversity dan Bioekologi</li>
-                        <li>- Jasa Jasa Lingkungan</li>
-                        <li>- Tata Ruang</li>
-                        <li>- Hidrologi rehabilitasi dan bidang sosial ekonomi budaya masyarakat</li>
-                    </ul>
-                    <div class="view-more-button mt--35 sal-animate d-flex" data-sal="slide-up" data-sal-duration="700"
-                        data-sal-delay="300">
-                        <a class="tmp-btn btn-primary" href="<?php echo e(route('contact')); ?>">Contact With Us</a>
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Bagian Kiri: Teks -->
+                <div class="col-lg-6">
+                    <div class="about-inner">
+                        <h2 class="title sal-animate mb--40" data-sal="slide-up" data-sal-duration="700"
+                            data-sal-delay="100">
+                            About PT CSI
+                        </h2>
+                        <p class="description sal-animate mb--25" data-sal="slide-up" data-sal-duration="700"
+                            data-sal-delay="300">
+                            PT. Catur Samasta Indonusa (CSI) adalah perusahaan konsultasi yang berfokus pada layanan
+                            profesional dalam bidang
+                            <strong>bisnis, manajemen, dan lingkungan hidup</strong>. Kami menyediakan solusi berbasis data
+                            dan riset mendalam untuk membantu
+                            klien dalam pengambilan keputusan strategis.
+                        </p>
+                        <p class="description sal-animate" data-sal="slide-up" data-sal-duration="700"
+                            data-sal-delay="300">
+                            Dengan tenaga ahli yang berpengalaman di bidangnya, kami berkomitmen untuk memberikan layanan
+                            berkualitas dalam:
+                        </p>
+                        <ul class="split-list sal-animate" data-sal="slide-up" data-sal-duration="700"
+                            data-sal-delay="300">
+                            <li>✅ <strong>Studi Kelayakan (Feasibility Study)</strong></li>
+                            <li>✅ <strong>Perencanaan Wilayah & Tata Ruang</strong></li>
+                            <li>✅ <strong>Survey & Pemetaan</strong></li>
+                            <li>✅ <strong>Design Engineering</strong></li>
+                            <li>✅ <strong>Kajian & Penilaian Lingkungan</strong></li>
+                        </ul>
+                        <p class="description sal-animate mt--25" data-sal="slide-up" data-sal-duration="700"
+                            data-sal-delay="300">
+                            Kami memiliki tenaga ahli di berbagai disiplin ilmu, termasuk:
+                        </p>
+                        <ul class="split-list sal-animate" data-sal="slide-up" data-sal-duration="700"
+                            data-sal-delay="300">
+                            <li>🔹 <strong>Konservasi Sumber Daya Alam Hayati</strong></li>
+                            <li>🔹 <strong>Biodiversitas & Bioekologi</strong></li>
+                            <li>🔹 <strong>Jasa Lingkungan & Pengelolaan Ekosistem</strong></li>
+                            <li>🔹 <strong>Tata Ruang & Pengembangan Wilayah</strong></li>
+                            <li>🔹 <strong>Hidrologi, Rehabilitasi, serta Sosial Ekonomi & Budaya Masyarakat</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bagian Kanan: Gambar -->
+                <div class="col-lg-6">
+                    <div class="thumbnail image-right-content">
+                        <img src="<?php echo e(asset('assets/images/logo/wp1.jpg')); ?>"src="<?php echo e(asset('assets/images/logo/wp1.jpg')); ?>"
+                            alt="split Images">
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="thumbnail image-right-content">
-                    <img src="<?php echo e(asset('assets/images/logo/wp1.jpg')); ?>"src="<?php echo e(asset('assets/images/logo/wp1.jpg')); ?>"
-                        alt="split Images">
-                </div>
-            </div>
-        </div>
     </section>
     <!-- about company wrapper end -->
 
@@ -292,7 +310,7 @@
                         </div>
                         <div class="information">
                             <div class="counter-details">
-                                <h2 class="title"><span class="counter animated fadeInDownBig">858</span>+</h2>
+                                <h2 class="title"><span class="counter animated fadeInDownBig">40</span>+</h2>
                                 <p class="disc">Successful Projects</p>
                             </div>
                         </div>
@@ -306,8 +324,8 @@
                         </div>
                         <div class="information">
                             <div class="counter-details">
-                                <h2 class="title"><span class="counter animated fadeInDownBig">858</span>k+</h2>
-                                <p class="disc">Happy Clients</p>
+                                <h2 class="title"><span class="counter animated fadeInDownBig">20</span>+</h2>
+                                <p class="disc">Clients</p>
                             </div>
                         </div>
                     </div>
@@ -320,8 +338,8 @@
                         </div>
                         <div class="information">
                             <div class="counter-details">
-                                <h2 class="title"><span class="counter animated fadeInDownBig">758</span>+</h2>
-                                <p class="disc">Media Active</p>
+                                <h2 class="title"><span class="counter animated fadeInDownBig">30</span>+</h2>
+                                <p class="disc">Partners</p>
                             </div>
                         </div>
                     </div>
@@ -334,8 +352,8 @@
                         </div>
                         <div class="information">
                             <div class="counter-details">
-                                <h2 class="title"><span class="counter animated fadeInDownBig">258</span>+</h2>
-                                <p class="disc">Skill Experience</p>
+                                <h2 class="title"><span class="counter animated fadeInDownBig">10</span>+</h2>
+                                <p class="disc">Consultants</p>
                             </div>
                         </div>
                     </div>
@@ -454,7 +472,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-head color-white">
-                            <div class="section-sub-title center-title" style="margin-top: -100px">
+                            <div class="section-sub-title center-title">
                                 <span class="subtitle">OUR PORTFOLIO</span>
                             </div>
                             <h2 class="title split-collab">Let's Check Our Best Works </h2>
@@ -474,12 +492,14 @@
                                             <div class="signle-product-start"
                                                 data-tmp-cursor="lg text-secondary transparent fw-bold">
                                                 <a class="thumbnail"
-                                                    href="<?php echo e(route('proyek.showindexpublik', $item->uid_proyek)); ?>">
+                                                    href="<?php echo e(route('proyek.showindexpublik', $item->uid_proyek)); ?>"
+                                                    target="_blank">
                                                     <img src="<?php echo e(asset($item->bukti_proyek)); ?>"
                                                         alt="<?php echo e($item->judul_proyek); ?>">
                                                 </a>
                                                 <div class="inner-content">
-                                                    <a href="<?php echo e(route('proyek.showindexpublik', $item->uid_proyek)); ?>">
+                                                    <a href="<?php echo e(route('proyek.showindexpublik', $item->uid_proyek)); ?>"
+                                                        target="_blank">
                                                         <h5 class="title"><?php echo e($item->judul_proyek); ?></h5>
                                                     </a>
                                                     <span class="designation"><?php echo e($item->partner_proyek); ?></span>
@@ -503,17 +523,17 @@
     <!-- tmp contact area -->
     <div class="contact-area tmp-section-gapBottom" id="contact">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-5">
+            <div class="row justify-content-center">
+                <div>
                     <div class="contact-inner">
-                        <div class="section-head section-head-one-side text-align-left">
+                        <div class="section-head section-head-one-side text-align-center">
                             <span class="title">Contact Us</span>
-                            <p class="description">
+                            <p class="description text-left">
                                 Jika Anda memiliki pertanyaan atau membutuhkan informasi lebih lanjut, jangan ragu untuk
-                                menghubungi kami. Kami siap membantu Anda dengan segala kebutuhan Anda.
+                                menghubungi kami. Kami siap membantu Anda dengan segala kebutuhan yang Anda perlukan.
+                                Silakan hubungi kami melalui informasi di bawah ini, dan tim kami akan segera merespons.
                             </p>
                         </div>
-
                         <ul class="ft-link ft-link-style-three">
                             <li>
                                 <div class="single-contact background-transparent">
@@ -533,8 +553,8 @@
                                     </div>
                                     <div class="content">
                                         <span>Sad Hasto Agus Suprapto</span>
-                                        <a class="contact-here"
-                                            href="https://api.whatsapp.com/send?phone=628129602523">+628129602523</a>
+                                        <a class="contact-here" href="https://api.whatsapp.com/send?phone=628129602523"
+                                            target="_blank">+628129602523</a>
                                     </div>
                                 </div>
                             </li>
@@ -545,8 +565,8 @@
                                     </div>
                                     <div class="content">
                                         <span>Rini Lestari</span>
-                                        <a class="contact-here"
-                                            href="https://api.whatsapp.com/send?phone=6281310437021">+6281310437021</a>
+                                        <a class="contact-here" href="https://api.whatsapp.com/send?phone=6281310437021"
+                                            target="_blank">+6281310437021</a>
                                     </div>
                                 </div>
                             </li>
@@ -555,11 +575,10 @@
                                     <div class="icon">
                                         <i class="fa-solid fa-envelope-open-text"></i>
                                     </div>
-
                                     <div class="content">
                                         <span>E-mail</span>
-                                        <a class="contact-here"
-                                            href="mailto:csi_samasta@yahoo.com">csi_samasta@yahoo.com</a>
+                                        <a class="contact-here" href="mailto:csi_samasta@yahoo.com"
+                                            target="_blank">csi_samasta@yahoo.com</a>
                                     </div>
                                 </div>
                             </li>
@@ -578,68 +597,6 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-7">
-                    <div class="contact-inner">
-                        <div class="section-head section-head-one-side text-align-left">
-                            <span class="title">GET IN TOUCH</span>
-                            <p class="description">
-                                Kami siap membantu Anda! Jika Anda memiliki pertanyaan atau ingin berdiskusi lebih lanjut,
-                                silakan hubungi kami melalui informasi yang tersedia di bawah ini. Kami akan segera
-                                merespons.
-                            </p>
-                        </div>
-                        <div class="contact-form style-two">
-                            <div id="form-messages"></div>
-                            <form id="contact-form" action="mailer.php" method="post">
-                                <div class="contact-form-wrapper row">
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <input class="input-field" name="name" placeholder="Name"
-                                                id="contact-name" type="text" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <input class="input-field" name="contact-phone" placeholder="Phone"
-                                                type="text">
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <input class="input-field" name="email" placeholder="Email" type="email"
-                                                required>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <input class="input-field" type="text" id="subject"
-                                                placeholder="Subject" name="subject">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <textarea class="input-field" placeholder="How can we help" name="message" id="contact-message"></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-12">
-                                        <div class="form-submit-group">
-                                            <button name="submit" class="tmp-btn btn-primary" type="submit"
-                                                id="submit">
-                                                Submit Now
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                </div>
             </div>
         </div>
     </div>
@@ -649,26 +606,21 @@
     <footer class="footer-area footer-style-one-wrapper bg-color-footer bg-image-none tmp-section-gap">
         <div class="container">
             <div class="footer-main footer-style-one mt--0">
-                <div class="row g-5">
-                    <div class="col-lg-4 col-md-6">
+                <div class="row g-5 row-cols-1 row-cols-md-2">
+                    <div class="col">
                         <div class="single-footer-wrapper border-right mr--20">
                             <div class="logo">
                                 <a href="<?php echo e(route('onepage-eight')); ?>">
-                                    <img src="<?php echo e(asset('assets/images/logo/csi_logo2.png')); ?>"src="<?php echo e(asset('assets/images/logo/csi_logo2.png')); ?>"
-                                        alt="logo">
+                                    <img src="<?php echo e(asset('assets/images/logo/csi_logo2.png')); ?>" alt="logo">
                                 </a>
                             </div>
-
                             <p class="description">
-                                PT Catur Samasta Indonusa adalah perusahaan konsultan yang bergerak
-                                di bidang manajemen,
+                                PT Catur Samasta Indonusa adalah perusahaan konsultan yang bergerak di bidang manajemen,
                                 lingkungan, dan sosial. Kami menyediakan berbagai layanan seperti feasibility study, tata
                                 ruang,
                                 survei potensi hutan, social impact assessment, serta kajian sosial ekonomi budaya
                                 masyarakat.
                             </p>
-
-
                             <div class="day-time">
                                 <div class="icon"><i class="fa-solid fa-alarm-clock"></i></div>
                                 <div class="content">
@@ -676,7 +628,6 @@
                                     <div class="time">9:00 AM – 17:00 PM</div>
                                 </div>
                             </div>
-
                             <ul class="social-icons solid-social-icons rounded-social-icons">
                                 <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                                 <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
@@ -685,12 +636,12 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-8">
-                        <iframe
+                    <div class="col">
+                        <iframe class="footer-map"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.9293900183523!2d106.74838108144093!3d-6.557294524003736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5d62e19e26f%3A0x624586ceef32cbbc!2sGreen%20View%20Residence!5e0!3m2!1sid!2sid!4v1736434788511!5m2!1sid!2sid"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+                            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                 </div>
             </div>

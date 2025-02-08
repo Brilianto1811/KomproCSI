@@ -1,8 +1,8 @@
 @extends('layouts.layoutdashboard')
 
 @section('content')
-    <div class="container">
-        <h1 class="mb-4">Daftar Proyek Publik</h1>
+    <div class="container p-4 bg-light shadow-lg rounded-lg">
+        <h2 class="mb-4 text-center bg-success text-white p-3 rounded">Daftar Proyek Publik</h2>
 
         @if (session('success'))
             <div class="alert alert-success">{{ session('success') }}</div>
@@ -12,7 +12,8 @@
         <div>
             <form action="{{ route('proyek.indexPublik') }}" method="GET" class="form-inline">
                 <input type="text" name="search" class="input-field" placeholder="Cari berdasarkan Judul/Deskripsi/Partner"
-                    value="{{ $searchTerm ?? '' }}" style="width: 300px; height: 25px; border-radius: 5px">
+                    value="{{ $searchTerm ?? '' }}"
+                    style="width: 380px; height: 38px; border-radius: 5px; border:1px solid">
                 <button type="submit" class="btn btn-info ml-2">Cari</button>
             </form>
         </div>
@@ -55,3 +56,6 @@
         </table>
     </div>
 @endsection
+
+<x-scripts />
+<x-head />

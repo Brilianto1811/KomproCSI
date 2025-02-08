@@ -1,24 +1,37 @@
-@extends('layouts.layout2')
+@extends('layouts.layoutdashboard')
 
 @section('content')
-    <div class="container">
-        <a href="{{ route('dashboard') }}" class="btn btn-secondary mt-2">Kembali ke Dashboard</a>
-        <h1>Add User</h1>
+    <div class="container p-4 bg-light shadow-lg rounded-lg">
+        <h2 class="mb-4 text-center bg-success text-white p-3 rounded">Tambah User</h2>
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <form action="{{ route('user.store') }}" method="POST">
             @csrf
-            <div class="mb-3">
-                <label for="username_user" class="form-label">Username</label>
+            <div class="form-group">
+                <label for="username">Username</label>
                 <input type="text" name="username_user" class="form-control" required>
             </div>
-            <div class="mb-3">
-                <label for="email_user" class="form-label">Email</label>
-                <input type="email" name="email_user" class="form-control" required>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email_user" class="form-control" required>
             </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" name="password" class="form-control" required>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="text" name="password" class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-success">Save</button>
+            <button type="submit" class="btn btn-primary">Simpan</button>
         </form>
     </div>
 @endsection
+
+<x-scripts />
+<x-head />

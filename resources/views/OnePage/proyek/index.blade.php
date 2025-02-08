@@ -5,7 +5,6 @@
         .btn-group {
             display: flex;
             gap: 5px;
-            /* Menambahkan jarak antar tombol */
         }
 
         .table-responsive {
@@ -13,9 +12,8 @@
             /* Pastikan table bisa di-scroll horizontal di layar kecil */
         }
     </style>
-    <div class="container">
-        <h1 class="mb-4">Daftar Proyek</h1>
-
+    <div class="container p-4 bg-gray-800 shadow-lg rounded-lg">
+        <h2 class="mb-4 text-center bg-success text-white p-3 rounded">Daftar Proyek</h2>
         @if (session('success'))
             <div class="alert alert-success">{{ session('success') }}</div>
         @elseif(session('error'))
@@ -24,14 +22,15 @@
 
         <!-- Kolom Pencarian -->
         <div class="d-flex justify-content-between mb-4">
-            <div style="margin-bottom: 20px">
+            <div>
                 <a href="{{ route('proyek.create') }}" class="btn btn-primary">Tambah Proyek Baru</a>
             </div>
             <div>
                 <form action="{{ route('proyek.index') }}" method="GET" class="form-inline">
                     <input type="text" name="search" class="input-field"
                         placeholder="Cari berdasarkan Judul/Deskripsi/Partner" value="{{ $searchTerm ?? '' }}"
-                        style="width: 300px; height: 25px; border-radius: 5px"> <!-- Ukuran kolom diperbesar -->
+                        style="width: 380px; height: 38px; border-radius: 5px; border:1px solid">
+                    <!-- Ukuran kolom diperbesar -->
                     <button type="submit" class="btn btn-info">Cari</button> <!-- Warna hijau -->
                 </form>
             </div>
@@ -41,13 +40,13 @@
         <table class="table table-responsive">
             <thead>
                 <tr>
-                    <th>Judul Proyek</th>
-                    <th>Deskripsi Proyek</th>
-                    <th>Tanggal Mulai</th>
-                    <th>Tanggal Selesai</th>
-                    <th>Status</th>
-                    <th>Partner</th>
-                    <th>Aksi</th>
+                    <th class="text-center">Judul Proyek</th>
+                    <th class="text-center">Deskripsi Proyek</th>
+                    <th class="text-center">Tanggal Mulai</th>
+                    <th class="text-center">Tanggal Selesai</th>
+                    <th class="text-center">Status</th>
+                    <th class="text-center">Partner</th>
+                    <th class="text-center">Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -85,3 +84,6 @@
         {{ $proyek->links() }}
     </div>
 @endsection
+
+<x-scripts />
+<x-head />

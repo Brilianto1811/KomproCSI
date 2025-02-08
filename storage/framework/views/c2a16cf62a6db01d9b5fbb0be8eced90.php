@@ -20,6 +20,7 @@
 <!-- custom Js -->
 <script src="<?php echo e(asset('assets/js/main.js')); ?>"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 <script>
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 5, // Jumlah slide yang ditampilkan sekaligus

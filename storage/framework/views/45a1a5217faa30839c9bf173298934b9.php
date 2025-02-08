@@ -1,6 +1,6 @@
 <?php $__env->startSection('content'); ?>
-    <div class="container p-4 bg-light shadow-lg rounded-lg">
-        <h2 class="mb-4 text-center bg-success text-white p-3 rounded">Tambah Proyek Baru</h2>
+    <div class="container p-4 bg-light rounded shadow-sm">
+        <h2 class="mb-4 text-center bg-success text-white p-3 rounded">Update Password Untuk <?php echo e($user->username_user); ?> </h2>
 
         <?php if($errors->any()): ?>
             <div class="alert alert-danger">
@@ -12,65 +12,17 @@
             </div>
         <?php endif; ?>
 
-        <form action="<?php echo e(route('proyek.store')); ?>" method="POST" enctype="multipart/form-data">
+        <form action="<?php echo e(route('user.updatePassword', $user->id_user)); ?>" method="POST">
             <?php echo csrf_field(); ?>
-
             <div class="form-group">
-                <label for="judul_proyek">Judul Proyek</label>
-                <input type="text" name="judul_proyek" id="judul_proyek" class="form-control"
-                    value="<?php echo e(old('judul_proyek')); ?>" required>
+                <label for="new_password">New Password</label>
+                <input type="password" name="password" class="form-control" required>
             </div>
-
             <div class="form-group">
-                <label for="deskripsi_proyek">Deskripsi Proyek</label>
-                <textarea name="deskripsi_proyek" id="deskripsi_proyek" class="form-control" required><?php echo e(old('deskripsi_proyek')); ?></textarea>
+                <label for="confirm_new_password">Confirm New Password</label>
+                <input type="password" name="password_confirmation" class="form-control" required>
             </div>
-
-            <div class="form-group">
-                <label for="file_proyek">File Proyek</label>
-                <input type="file" name="file_proyek[]" id="file_proyek" class="form-control" multiple>
-            </div>
-
-            <div class="form-group">
-                <label for="bukti_proyek">Dokumentasi Proyek</label>
-                <input type="file" name="bukti_proyek[]" id="bukti_proyek" class="form-control" multiple>
-            </div>
-
-            <div class="form-group">
-                <label for="partner_proyek">Partner Proyek (Opsional)</label>
-                <input type="text" name="partner_proyek" id="partner_proyek" class="form-control"
-                    value="<?php echo e(old('partner_proyek')); ?>">
-            </div>
-
-            <div class="form-group">
-                <label for="tgl_mulai">Tanggal Mulai</label>
-                <input type="date" name="tgl_mulai" id="tgl_mulai" class="form-control" value="<?php echo e(old('tgl_mulai')); ?>">
-            </div>
-
-            <div class="form-group">
-                <label for="tgl_selesai">Tanggal Selesai</label>
-                <input type="date" name="tgl_selesai" id="tgl_selesai" class="form-control"
-                    value="<?php echo e(old('tgl_selesai')); ?>">
-            </div>
-
-            <div class="form-group">
-                <label for="status">Status</label>
-                <select name="status" id="status" class="form-control form-control-lg">
-                    <?php if(Auth::check() && Auth::user()->id_role == 1): ?>
-                        <!-- Jika id_role = 1, tampilkan semua pilihan -->
-                        <option value="P" <?php echo e(old('status') == 'P' ? 'selected' : ''); ?>>Publik</option>
-                        <option value="I" <?php echo e(old('status') == 'I' ? 'selected' : ''); ?>>Internal</option>
-                    <?php elseif(Auth::check() && Auth::user()->id_role == 2): ?>
-                        <!-- Jika id_role = 2, hanya tampilkan 'Internal' -->
-                        <option value="I" <?php echo e(old('status') == 'I' ? 'selected' : ''); ?>>Internal</option>
-                    <?php else: ?>
-                        <!-- Jika tidak ada role, tampilkan pilihan default atau kosong -->
-                        <option value="" disabled selected>Pilih Status</option>
-                    <?php endif; ?>
-                </select>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Simpan Proyek</button>
+            <button type="submit" class="btn btn-primary">Simpan</button>
         </form>
     </div>
 <?php $__env->stopSection(); ?>
@@ -116,4 +68,4 @@
 <?php unset($__componentOriginal0f509fab02c45445826003a1e50db506); ?>
 <?php endif; ?>
 
-<?php echo $__env->make('layouts.layoutdashboard', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\ACER\Documents\PROJEK WEB CSI\KomproCSI\resources\views/OnePage/proyek/create.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.layoutdashboard', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\ACER\Documents\PROJEK WEB CSI\KomproCSI\resources\views/OnePage/user/edit-password.blade.php ENDPATH**/ ?>
